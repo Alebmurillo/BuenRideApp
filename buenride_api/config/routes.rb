@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  namespace :api do
+        resources :personas, format: :json
+        resources :reviews, format: :json
+        resources :lugars, format: :json
+        resources :usuarios, format: :json
+  end
+#        resources :usuarios, :defaults => { :format => 'json' }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
