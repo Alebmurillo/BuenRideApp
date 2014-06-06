@@ -67,12 +67,12 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"BuenRide.dll",
-		"Facebook.dll",
 		"GooglePlayServicesLib.dll",
 		"Xamarin.Auth.Android.dll",
 		"Xamarin.Social.Android.dll",
+		"Facebook.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_19";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_16";
 }

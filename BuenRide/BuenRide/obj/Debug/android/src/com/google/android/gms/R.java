@@ -229,99 +229,101 @@ containing a value of this type.
         public static int monoandroidsplash=0x7f020023;
     }
     public static final class id {
-        public static int CalculateCost=0x7f050058;
-        public static int Facebook=0x7f05005b;
-        public static int RectangleAddReview=0x7f05003f;
+        public static int Facebook=0x7f05005c;
+        public static int RectangleAddReview=0x7f050041;
         public static int RectangleAddRide=0x7f05000e;
         public static int RectangleAddStop=0x7f05000c;
         public static int RectangleByMap=0x7f050008;
-        public static int RectangleCalculate=0x7f050016;
-        public static int RectangleCalculateCost=0x7f050032;
+        public static int RectangleByMap2=0x7f050013;
+        public static int RectangleCalculate=0x7f050018;
+        public static int RectangleCalculateCost=0x7f050035;
         public static int RectangleCancelAddRide=0x7f050010;
-        public static int RectangleCancelSignUp=0x7f05004a;
+        public static int RectangleCancelSignUp=0x7f050050;
         public static int RectangleCurrentLocation=0x7f050006;
-        public static int RectangleLogin=0x7f050023;
-        public static int RectangleLogin2=0x7f050026;
-        public static int RectangleLogin3=0x7f050045;
-        public static int RectangleLogin4=0x7f050047;
-        public static int RectangleLogin5=0x7f050048;
-        public static int RectangleLogout=0x7f050036;
+        public static int RectangleCurrentLocation2=0x7f050012;
+        public static int RectangleLogin=0x7f050026;
+        public static int RectangleLogin2=0x7f050029;
+        public static int RectangleLogin3=0x7f05004b;
+        public static int RectangleLogin4=0x7f05004d;
+        public static int RectangleLogin5=0x7f05004e;
+        public static int RectangleLogout=0x7f050039;
         public static int RectangleObservations=0x7f05000a;
-        public static int RectangleProfile=0x7f050030;
-        public static int RectangleSearchRide=0x7f05002e;
-        public static int RectangleSeekBarProfite=0x7f050013;
-        public static int RectangleShare=0x7f050034;
-        public static int RectangleSignUp=0x7f05002a;
-        public static int RectangleViewRides=0x7f050041;
-        public static int Twitter=0x7f05005c;
-        public static int comentario=0x7f05004e;
-        public static int containerLogin=0x7f050020;
-        public static int email=0x7f050024;
-        public static int end_point=0x7f050051;
-        public static int end_point_value=0x7f050052;
+        public static int RectangleProfile=0x7f050034;
+        public static int RectangleSearchRide=0x7f050031;
+        public static int RectangleSeekBarProfite=0x7f050015;
+        public static int RectangleShare=0x7f050037;
+        public static int RectangleShareFacebook=0x7f050046;
+        public static int RectangleShareTwitter=0x7f050048;
+        public static int RectangleSignUp=0x7f05002d;
+        public static int RectangleViewRides=0x7f050043;
+        public static int Twitter=0x7f05005d;
+        public static int comentario=0x7f050054;
+        public static int containerLogin=0x7f050023;
+        public static int email=0x7f050027;
+        public static int end_point=0x7f050057;
+        public static int end_point_value=0x7f050058;
         public static int hybrid=0x7f050004;
-        public static int imageView1=0x7f050021;
-        public static int imageViewFbLogin=0x7f05002c;
-        public static int image_user=0x7f05004c;
-        public static int imagelogo=0x7f05002d;
-        public static int listComments=0x7f050043;
-        public static int listRides=0x7f05001f;
-        public static int login=0x7f050028;
-        public static int login_shape=0x7f05005a;
-        public static int myPorf=0x7f050057;
-        public static int name=0x7f050044;
+        public static int imageView1=0x7f050024;
+        public static int imageViewFbLogin=0x7f05002f;
+        public static int image_user=0x7f050052;
+        public static int imagelogo=0x7f050030;
+        public static int linearLayout1=0x7f05005e;
+        public static int listComments=0x7f050045;
+        public static int listRides=0x7f050022;
+        public static int login=0x7f05002b;
+        public static int login_shape=0x7f05005b;
+        public static int name=0x7f05004a;
         public static int none=0x7f050000;
         public static int normal=0x7f050001;
-        public static int num_stops=0x7f050053;
-        public static int num_stops_value=0x7f050054;
-        public static int numberPickerDays=0x7f050012;
-        public static int numberPickerGass=0x7f050015;
+        public static int num_stops=0x7f050059;
+        public static int num_stops_value=0x7f05005a;
+        public static int numberPickerDays=0x7f050014;
+        public static int numberPickerGass=0x7f050017;
         public static int observations=0x7f05000b;
-        public static int password=0x7f050027;
-        public static int ratingBar1=0x7f05003d;
+        public static int password=0x7f05002a;
+        public static int ratingBar1=0x7f05003f;
         public static int satellite=0x7f050002;
-        public static int searchRide=0x7f050056;
-        public static int seekBarProfite=0x7f050014;
-        public static int share=0x7f050059;
+        public static int seekBarProfite=0x7f050016;
         public static int signup_form=0x7f050005;
-        public static int start_point=0x7f05004f;
-        public static int start_point_value=0x7f050050;
-        public static int telephone=0x7f050049;
+        public static int start_point=0x7f050055;
+        public static int start_point_value=0x7f050056;
+        public static int telephone=0x7f05004f;
         public static int terrain=0x7f050003;
-        public static int textName=0x7f050055;
-        public static int textView1=0x7f050038;
-        public static int textView_Review=0x7f05003e;
-        public static int textView_addReview=0x7f050040;
+        public static int textView1=0x7f050020;
+        public static int textView_Review=0x7f050040;
+        public static int textView_addReview=0x7f050042;
         public static int textView_addRide=0x7f05000f;
         public static int textView_addStop=0x7f05000d;
         public static int textView_byMap=0x7f050009;
-        public static int textView_calcDay=0x7f05001c;
-        public static int textView_calcDayValue=0x7f05001d;
-        public static int textView_calcMonth=0x7f050018;
-        public static int textView_calcMonthValue=0x7f050019;
-        public static int textView_calcWeek=0x7f05001a;
-        public static int textView_calcWeekValue=0x7f05001b;
-        public static int textView_calculate=0x7f050017;
-        public static int textView_calculateCost=0x7f050033;
+        public static int textView_calcDay=0x7f05001e;
+        public static int textView_calcDayValue=0x7f05001f;
+        public static int textView_calcMonth=0x7f05001a;
+        public static int textView_calcMonthValue=0x7f05001b;
+        public static int textView_calcWeek=0x7f05001c;
+        public static int textView_calcWeekValue=0x7f05001d;
+        public static int textView_calculate=0x7f050019;
+        public static int textView_calculateCost=0x7f050036;
         public static int textView_cancelAddRide=0x7f050011;
-        public static int textView_cancelSU=0x7f05004b;
+        public static int textView_cancelSU=0x7f050051;
         public static int textView_currentLocation=0x7f050007;
-        public static int textView_emailAddress=0x7f050022;
-        public static int textView_exampleMail=0x7f05003a;
-        public static int textView_examplePhone=0x7f05003c;
-        public static int textView_login=0x7f050029;
-        public static int textView_logout=0x7f050037;
-        public static int textView_mail=0x7f050039;
-        public static int textView_password=0x7f050025;
-        public static int textView_phone=0x7f05003b;
-        public static int textView_profile=0x7f050031;
-        public static int textView_rides=0x7f05001e;
-        public static int textView_searchRide=0x7f05002f;
-        public static int textView_share=0x7f050035;
-        public static int textView_signUp=0x7f05002b;
-        public static int textView_viewRides=0x7f050042;
-        public static int user_name=0x7f05004d;
-        public static int username=0x7f050046;
+        public static int textView_emailAddress=0x7f050025;
+        public static int textView_exampleMail=0x7f05003c;
+        public static int textView_examplePhone=0x7f05003e;
+        public static int textView_login=0x7f05002c;
+        public static int textView_logout=0x7f05003a;
+        public static int textView_mail=0x7f05003b;
+        public static int textView_password=0x7f050028;
+        public static int textView_phone=0x7f05003d;
+        public static int textView_profile=0x7f050033;
+        public static int textView_rides=0x7f050021;
+        public static int textView_searchRide=0x7f050032;
+        public static int textView_share=0x7f050038;
+        public static int textView_share_facebook=0x7f050047;
+        public static int textView_share_twitter=0x7f050049;
+        public static int textView_signUp=0x7f05002e;
+        public static int textView_viewRides=0x7f050044;
+        public static int user_name=0x7f050053;
+        public static int username=0x7f05004c;
     }
     public static final class integer {
         public static int google_play_services_version=0x7f070000;
@@ -329,22 +331,25 @@ containing a value of this type.
     public static final class layout {
         public static int activity_add_ride=0x7f030000;
         public static int activity_calculate_cost_main=0x7f030001;
-        public static int activity_list_rides=0x7f030002;
-        public static int activity_login=0x7f030003;
-        public static int activity_main=0x7f030004;
-        public static int activity_menu=0x7f030005;
-        public static int activity_profile=0x7f030006;
-        public static int activity_search_ride=0x7f030007;
-        public static int activity_sign_up=0x7f030008;
-        public static int background_image_gradient=0x7f030009;
-        public static int item_comment=0x7f03000a;
-        public static int item_ride=0x7f03000b;
-        public static int principalmenulayout=0x7f03000c;
-        public static int rectangle=0x7f03000d;
-        public static int rectangle_input=0x7f03000e;
-        public static int rectangle_input_gray=0x7f03000f;
-        public static int rectangle_stop=0x7f030010;
-        public static int sharelayout=0x7f030011;
+        public static int activity_calculate_main=0x7f030002;
+        public static int activity_gps=0x7f030003;
+        public static int activity_list_rides=0x7f030004;
+        public static int activity_login=0x7f030005;
+        public static int activity_main=0x7f030006;
+        public static int activity_menu=0x7f030007;
+        public static int activity_profile=0x7f030008;
+        public static int activity_search_ride=0x7f030009;
+        public static int activity_share=0x7f03000a;
+        public static int activity_sign_up=0x7f03000b;
+        public static int background_image_gradient=0x7f03000c;
+        public static int item_comment=0x7f03000d;
+        public static int item_ride=0x7f03000e;
+        public static int rectangle=0x7f03000f;
+        public static int rectangle_input=0x7f030010;
+        public static int rectangle_input_gray=0x7f030011;
+        public static int rectangle_stop=0x7f030012;
+        public static int sharelayout=0x7f030013;
+        public static int showmap=0x7f030014;
     }
     public static final class string {
         public static int action_forgot_password=0x7f060023;
@@ -509,7 +514,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.google.android.gms:adSize
+          @attr name android:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
@@ -529,7 +534,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.google.android.gms:adSizes
+          @attr name android:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
@@ -545,7 +550,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.google.android.gms:adUnitId
+          @attr name android:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /** Attributes that can be used with a MapAttrs.
@@ -601,7 +606,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:cameraBearing
+          @attr name android:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
@@ -615,7 +620,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:cameraTargetLat
+          @attr name android:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
@@ -629,7 +634,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:cameraTargetLng
+          @attr name android:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
@@ -643,7 +648,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:cameraTilt
+          @attr name android:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
@@ -657,7 +662,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:cameraZoom
+          @attr name android:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
@@ -677,7 +682,7 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.google.android.gms:mapType
+          @attr name android:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
@@ -691,7 +696,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:uiCompass
+          @attr name android:uiCompass
         */
         public static final int MapAttrs_uiCompass = 6;
         /**
@@ -705,7 +710,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:uiRotateGestures
+          @attr name android:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 7;
         /**
@@ -719,7 +724,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:uiScrollGestures
+          @attr name android:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 8;
         /**
@@ -733,7 +738,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:uiTiltGestures
+          @attr name android:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 9;
         /**
@@ -747,7 +752,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:uiZoomControls
+          @attr name android:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 10;
         /**
@@ -761,7 +766,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:uiZoomGestures
+          @attr name android:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 11;
         /**
@@ -775,7 +780,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:useViewLifecycle
+          @attr name android:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 12;
         /**
@@ -789,7 +794,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.google.android.gms:zOrderOnTop
+          @attr name android:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 13;
     };

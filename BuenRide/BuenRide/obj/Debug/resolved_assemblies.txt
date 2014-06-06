@@ -1,5 +1,5 @@
-C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\bin\Debug\BuenRide.dll
-C:\Users\bolanosm\Documents\Projects\BuenRide\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll
-C:\Users\bolanosm\Documents\Projects\BuenRide\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll
-C:\Users\bolanosm\Documents\Projects\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll
-C:\Users\bolanosm\Documents\Projects\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/BuenRide/bin/Debug/BuenRide.dll
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/Components/googleplayservicesjellybean-16.0/lib/android/GooglePlayServicesLib.dll
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/Components/xamarin.social-1.1.1/lib/android/Xamarin.Auth.Android.dll
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/Components/xamarin.social-1.1.1/lib/android/Xamarin.Social.Android.dll
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/Components/facebook-sdk-6.2.1/lib/android/Facebook.dll
