@@ -2,6 +2,9 @@
 using System;
 using MonoTouch.Foundation;
 
+using Xamarin.Social;
+using Xamarin.Social.Services;
+
 namespace BuenRide.iPhone
 {
 	public partial class MainViewController : UIViewController
@@ -37,6 +40,7 @@ namespace BuenRide.iPhone
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
+
 		}
 
 		public override void ViewWillDisappear (bool animated)
@@ -52,6 +56,52 @@ namespace BuenRide.iPhone
 		#endregion
 
 
+		partial void UIButton529_TouchUpInside (UIButton sender)
+		{
+			shareOnTwitter();
+		}
+
+		partial void UIButton528_TouchUpInside (UIButton sender)
+		{
+			shareOnFacebook() ;
+		}
+
+		public void shareOnTwitter() 
+		{
+			// 1. Create the service
+			var twitter = new TwitterService { ConsumerKey= "jt8zcYZSrrwuVn6cgHuW6mcou",
+				ConsumerSecret ="APh7LVOQBHw6J8DVmCcC9tRGUBQbitn5o9CzNN3mlvzG7ZNKJr",
+				CallbackUrl = new Uri ("https://api.twitter.com/1.1/")};       
+			// 2. Create an item to share
+			var item = new Item { Text = "Xamarin.Social is the bomb.com." };
+			item.Links.Add (new Uri ("http://github.com/xamarin/xamarin.social"));
+
+			var shareController = twitter.GetShareUI(item, result => {
+				// result lets you know if the user shared the item or canceled
+				DismissViewController (true, null);
+			});
+			PresentViewController (shareController, true, null);
+		}
+
+		public void shareOnFacebook() 
+		{
+			// 1. Create the service
+			var facebook = new FacebookService {
+				ClientId = "238624846333637",
+				RedirectUrl = new System.Uri ("<Redirect URL from developers.facebook.com/apps>")
+			};
+
+			// 2. Create an item to share
+			var item = new Item { Text = "Xamarin.Social is the bomb.com." };
+			item.Links.Add (new Uri ("http://github.com/xamarin/xamarin.social"));
+
+			// 3. Present the UI on iOS
+			var shareController = facebook.GetShareUI (item, result => {
+				// result lets you know if the user shared the item or canceled
+				DismissViewController (true, null);
+			});
+			PresentViewController (shareController, true, null);
+		}
 	}
 }
 
