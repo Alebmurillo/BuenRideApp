@@ -10,6 +10,8 @@ namespace BuenRide.iPhone
 	{
 		public FlipsideViewController (IntPtr handle) : base (handle)
 		{
+
+			this.View.InsertSubview (new UIImageView (UIImage.FromBundle ("background2.jpg")), 0);
 		}
 
 		public override void DidReceiveMemoryWarning ()

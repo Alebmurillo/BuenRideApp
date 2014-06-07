@@ -14,10 +14,6 @@ namespace BuenRide.iPhone
 	[Register ("FlipsideViewController")]
 	partial class FlipsideViewController
 	{
-		[Action ("done:")]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void done (UIBarButtonItem sender);
-
 		void ReleaseDesignerOutlets ()
 		{
 		}

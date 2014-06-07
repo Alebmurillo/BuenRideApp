@@ -16,49 +16,213 @@ namespace BuenRide.iPhone
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIView Login { get; set; }
+		UIButton AddReviewButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIScrollView ScrollSignUp { get; set; }
+		UIButton AddRideSaveButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIView SignIn { get; set; }
+		UIButton ByMapDestButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIView Splash { get; set; }
+		UIButton ByMapStartButton { get; set; }
 
-		[Action ("UIButton189_TouchUpInside:")]
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton189_TouchUpInside (UIButton sender);
+		UIButton CancelAddRideButton { get; set; }
 
-		[Action ("UIButton194_TouchUpInside:")]
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton194_TouchUpInside (UIButton sender);
+		UITableView CommentsTable { get; set; }
 
-		[Action ("UIButton203_TouchUpInside:")]
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton203_TouchUpInside (UIButton sender);
+		UIButton CurrentLocationDestButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton CurrentLocStartButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel DestinationLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel EmailLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel emailValueLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel KilometersLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField KmTextfield { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel NameLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField ObservationsField { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel ObservationsLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel PhoneLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel PhoneValueLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel QuantityPersonsLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField QuantityPersonsTextfield { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel ReviewsLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton RidesButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton ShareFbButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton ShareTwitterButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel StartPointCalculateLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel StartPointLabel { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (Login != null) {
-				Login.Dispose ();
-				Login = null;
+			if (AddReviewButton != null) {
+				AddReviewButton.Dispose ();
+				AddReviewButton = null;
 			}
-			if (ScrollSignUp != null) {
-				ScrollSignUp.Dispose ();
-				ScrollSignUp = null;
+			if (AddRideSaveButton != null) {
+				AddRideSaveButton.Dispose ();
+				AddRideSaveButton = null;
 			}
-			if (SignIn != null) {
-				SignIn.Dispose ();
-				SignIn = null;
+			if (ByMapDestButton != null) {
+				ByMapDestButton.Dispose ();
+				ByMapDestButton = null;
 			}
-			if (Splash != null) {
-				Splash.Dispose ();
-				Splash = null;
+			if (ByMapStartButton != null) {
+				ByMapStartButton.Dispose ();
+				ByMapStartButton = null;
+			}
+			if (CancelAddRideButton != null) {
+				CancelAddRideButton.Dispose ();
+				CancelAddRideButton = null;
+			}
+			if (CommentsTable != null) {
+				CommentsTable.Dispose ();
+				CommentsTable = null;
+			}
+			if (CurrentLocationDestButton != null) {
+				CurrentLocationDestButton.Dispose ();
+				CurrentLocationDestButton = null;
+			}
+			if (CurrentLocStartButton != null) {
+				CurrentLocStartButton.Dispose ();
+				CurrentLocStartButton = null;
+			}
+			if (DestinationLabel != null) {
+				DestinationLabel.Dispose ();
+				DestinationLabel = null;
+			}
+			if (EmailLabel != null) {
+				EmailLabel.Dispose ();
+				EmailLabel = null;
+			}
+			if (emailValueLabel != null) {
+				emailValueLabel.Dispose ();
+				emailValueLabel = null;
+			}
+			if (KilometersLabel != null) {
+				KilometersLabel.Dispose ();
+				KilometersLabel = null;
+			}
+			if (KmTextfield != null) {
+				KmTextfield.Dispose ();
+				KmTextfield = null;
+			}
+			if (NameLabel != null) {
+				NameLabel.Dispose ();
+				NameLabel = null;
+			}
+			if (ObservationsField != null) {
+				ObservationsField.Dispose ();
+				ObservationsField = null;
+			}
+			if (ObservationsLabel != null) {
+				ObservationsLabel.Dispose ();
+				ObservationsLabel = null;
+			}
+			if (PhoneLabel != null) {
+				PhoneLabel.Dispose ();
+				PhoneLabel = null;
+			}
+			if (PhoneValueLabel != null) {
+				PhoneValueLabel.Dispose ();
+				PhoneValueLabel = null;
+			}
+			if (QuantityPersonsLabel != null) {
+				QuantityPersonsLabel.Dispose ();
+				QuantityPersonsLabel = null;
+			}
+			if (QuantityPersonsTextfield != null) {
+				QuantityPersonsTextfield.Dispose ();
+				QuantityPersonsTextfield = null;
+			}
+			if (ReviewsLabel != null) {
+				ReviewsLabel.Dispose ();
+				ReviewsLabel = null;
+			}
+			if (RidesButton != null) {
+				RidesButton.Dispose ();
+				RidesButton = null;
+			}
+			if (ShareFbButton != null) {
+				ShareFbButton.Dispose ();
+				ShareFbButton = null;
+			}
+			if (ShareTwitterButton != null) {
+				ShareTwitterButton.Dispose ();
+				ShareTwitterButton = null;
+			}
+			if (StartPointCalculateLabel != null) {
+				StartPointCalculateLabel.Dispose ();
+				StartPointCalculateLabel = null;
+			}
+			if (StartPointLabel != null) {
+				StartPointLabel.Dispose ();
+				StartPointLabel = null;
 			}
 		}
 	}

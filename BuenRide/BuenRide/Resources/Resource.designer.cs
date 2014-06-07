@@ -300,137 +300,134 @@ namespace BuenRide
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f05005c
-			public const int Facebook = 2131034204;
+			// aapt resource value: 0x7f05005a
+			public const int Facebook = 2131034202;
 			
-			// aapt resource value: 0x7f050041
-			public const int RectangleAddReview = 2131034177;
-			
-			// aapt resource value: 0x7f05000e
-			public const int RectangleAddRide = 2131034126;
+			// aapt resource value: 0x7f05003f
+			public const int RectangleAddReview = 2131034175;
 			
 			// aapt resource value: 0x7f05000c
-			public const int RectangleAddStop = 2131034124;
+			public const int RectangleAddRide = 2131034124;
 			
 			// aapt resource value: 0x7f050008
 			public const int RectangleByMap = 2131034120;
 			
-			// aapt resource value: 0x7f050013
-			public const int RectangleByMap2 = 2131034131;
+			// aapt resource value: 0x7f050011
+			public const int RectangleByMap2 = 2131034129;
 			
-			// aapt resource value: 0x7f050018
-			public const int RectangleCalculate = 2131034136;
+			// aapt resource value: 0x7f050016
+			public const int RectangleCalculate = 2131034134;
 			
-			// aapt resource value: 0x7f050035
-			public const int RectangleCalculateCost = 2131034165;
+			// aapt resource value: 0x7f050033
+			public const int RectangleCalculateCost = 2131034163;
 			
-			// aapt resource value: 0x7f050010
-			public const int RectangleCancelAddRide = 2131034128;
+			// aapt resource value: 0x7f05000e
+			public const int RectangleCancelAddRide = 2131034126;
 			
-			// aapt resource value: 0x7f050050
-			public const int RectangleCancelSignUp = 2131034192;
+			// aapt resource value: 0x7f05004e
+			public const int RectangleCancelSignUp = 2131034190;
 			
 			// aapt resource value: 0x7f050006
 			public const int RectangleCurrentLocation = 2131034118;
 			
-			// aapt resource value: 0x7f050012
-			public const int RectangleCurrentLocation2 = 2131034130;
+			// aapt resource value: 0x7f050010
+			public const int RectangleCurrentLocation2 = 2131034128;
 			
-			// aapt resource value: 0x7f050026
-			public const int RectangleLogin = 2131034150;
+			// aapt resource value: 0x7f050024
+			public const int RectangleLogin = 2131034148;
 			
-			// aapt resource value: 0x7f050029
-			public const int RectangleLogin2 = 2131034153;
+			// aapt resource value: 0x7f050027
+			public const int RectangleLogin2 = 2131034151;
+			
+			// aapt resource value: 0x7f050049
+			public const int RectangleLogin3 = 2131034185;
 			
 			// aapt resource value: 0x7f05004b
-			public const int RectangleLogin3 = 2131034187;
+			public const int RectangleLogin4 = 2131034187;
 			
-			// aapt resource value: 0x7f05004d
-			public const int RectangleLogin4 = 2131034189;
+			// aapt resource value: 0x7f05004c
+			public const int RectangleLogin5 = 2131034188;
 			
-			// aapt resource value: 0x7f05004e
-			public const int RectangleLogin5 = 2131034190;
-			
-			// aapt resource value: 0x7f050039
-			public const int RectangleLogout = 2131034169;
+			// aapt resource value: 0x7f050037
+			public const int RectangleLogout = 2131034167;
 			
 			// aapt resource value: 0x7f05000a
 			public const int RectangleObservations = 2131034122;
 			
-			// aapt resource value: 0x7f050034
-			public const int RectangleProfile = 2131034164;
+			// aapt resource value: 0x7f050032
+			public const int RectangleProfile = 2131034162;
 			
-			// aapt resource value: 0x7f050031
-			public const int RectangleSearchRide = 2131034161;
+			// aapt resource value: 0x7f05002f
+			public const int RectangleSearchRide = 2131034159;
 			
-			// aapt resource value: 0x7f050015
-			public const int RectangleSeekBarProfite = 2131034133;
+			// aapt resource value: 0x7f050013
+			public const int RectangleSeekBarProfite = 2131034131;
 			
-			// aapt resource value: 0x7f050037
-			public const int RectangleShare = 2131034167;
+			// aapt resource value: 0x7f050035
+			public const int RectangleShare = 2131034165;
+			
+			// aapt resource value: 0x7f050044
+			public const int RectangleShareFacebook = 2131034180;
 			
 			// aapt resource value: 0x7f050046
-			public const int RectangleShareFacebook = 2131034182;
+			public const int RectangleShareTwitter = 2131034182;
 			
-			// aapt resource value: 0x7f050048
-			public const int RectangleShareTwitter = 2131034184;
+			// aapt resource value: 0x7f05002b
+			public const int RectangleSignUp = 2131034155;
 			
-			// aapt resource value: 0x7f05002d
-			public const int RectangleSignUp = 2131034157;
+			// aapt resource value: 0x7f050041
+			public const int RectangleViewRides = 2131034177;
 			
-			// aapt resource value: 0x7f050043
-			public const int RectangleViewRides = 2131034179;
+			// aapt resource value: 0x7f05005b
+			public const int Twitter = 2131034203;
 			
-			// aapt resource value: 0x7f05005d
-			public const int Twitter = 2131034205;
+			// aapt resource value: 0x7f050052
+			public const int comentario = 2131034194;
 			
-			// aapt resource value: 0x7f050054
-			public const int comentario = 2131034196;
+			// aapt resource value: 0x7f050021
+			public const int containerLogin = 2131034145;
 			
-			// aapt resource value: 0x7f050023
-			public const int containerLogin = 2131034147;
+			// aapt resource value: 0x7f050025
+			public const int email = 2131034149;
 			
-			// aapt resource value: 0x7f050027
-			public const int email = 2131034151;
+			// aapt resource value: 0x7f050055
+			public const int end_point = 2131034197;
 			
-			// aapt resource value: 0x7f050057
-			public const int end_point = 2131034199;
-			
-			// aapt resource value: 0x7f050058
-			public const int end_point_value = 2131034200;
+			// aapt resource value: 0x7f050056
+			public const int end_point_value = 2131034198;
 			
 			// aapt resource value: 0x7f050004
 			public const int hybrid = 2131034116;
 			
-			// aapt resource value: 0x7f050024
-			public const int imageView1 = 2131034148;
-			
-			// aapt resource value: 0x7f05002f
-			public const int imageViewFbLogin = 2131034159;
-			
-			// aapt resource value: 0x7f050052
-			public const int image_user = 2131034194;
-			
-			// aapt resource value: 0x7f050030
-			public const int imagelogo = 2131034160;
-			
-			// aapt resource value: 0x7f05005e
-			public const int linearLayout1 = 2131034206;
-			
-			// aapt resource value: 0x7f050045
-			public const int listComments = 2131034181;
-			
 			// aapt resource value: 0x7f050022
-			public const int listRides = 2131034146;
+			public const int imageView1 = 2131034146;
 			
-			// aapt resource value: 0x7f05002b
-			public const int login = 2131034155;
+			// aapt resource value: 0x7f05002d
+			public const int imageViewFbLogin = 2131034157;
 			
-			// aapt resource value: 0x7f05005b
-			public const int login_shape = 2131034203;
+			// aapt resource value: 0x7f050050
+			public const int image_user = 2131034192;
 			
-			// aapt resource value: 0x7f05004a
-			public const int name = 2131034186;
+			// aapt resource value: 0x7f05002e
+			public const int imagelogo = 2131034158;
+			
+			// aapt resource value: 0x7f05005c
+			public const int linearLayout1 = 2131034204;
+			
+			// aapt resource value: 0x7f050043
+			public const int listComments = 2131034179;
+			
+			// aapt resource value: 0x7f050020
+			public const int listRides = 2131034144;
+			
+			// aapt resource value: 0x7f050029
+			public const int login = 2131034153;
+			
+			// aapt resource value: 0x7f050059
+			public const int login_shape = 2131034201;
+			
+			// aapt resource value: 0x7f050048
+			public const int name = 2131034184;
 			
 			// aapt resource value: 0x7f050000
 			public const int none = 2131034112;
@@ -438,152 +435,149 @@ namespace BuenRide
 			// aapt resource value: 0x7f050001
 			public const int normal = 2131034113;
 			
-			// aapt resource value: 0x7f050059
-			public const int num_stops = 2131034201;
+			// aapt resource value: 0x7f050057
+			public const int num_stops = 2131034199;
 			
-			// aapt resource value: 0x7f05005a
-			public const int num_stops_value = 2131034202;
+			// aapt resource value: 0x7f050058
+			public const int num_stops_value = 2131034200;
 			
-			// aapt resource value: 0x7f050014
-			public const int numberPickerDays = 2131034132;
+			// aapt resource value: 0x7f050012
+			public const int numberPickerDays = 2131034130;
 			
-			// aapt resource value: 0x7f050017
-			public const int numberPickerGass = 2131034135;
+			// aapt resource value: 0x7f050015
+			public const int numberPickerGass = 2131034133;
 			
 			// aapt resource value: 0x7f05000b
 			public const int observations = 2131034123;
 			
-			// aapt resource value: 0x7f05002a
-			public const int password = 2131034154;
+			// aapt resource value: 0x7f050028
+			public const int password = 2131034152;
 			
-			// aapt resource value: 0x7f05003f
-			public const int ratingBar1 = 2131034175;
+			// aapt resource value: 0x7f05003d
+			public const int ratingBar1 = 2131034173;
 			
 			// aapt resource value: 0x7f050002
 			public const int satellite = 2131034114;
 			
-			// aapt resource value: 0x7f050016
-			public const int seekBarProfite = 2131034134;
+			// aapt resource value: 0x7f050014
+			public const int seekBarProfite = 2131034132;
 			
 			// aapt resource value: 0x7f050005
 			public const int signup_form = 2131034117;
 			
-			// aapt resource value: 0x7f050055
-			public const int start_point = 2131034197;
+			// aapt resource value: 0x7f050053
+			public const int start_point = 2131034195;
 			
-			// aapt resource value: 0x7f050056
-			public const int start_point_value = 2131034198;
+			// aapt resource value: 0x7f050054
+			public const int start_point_value = 2131034196;
 			
-			// aapt resource value: 0x7f05004f
-			public const int telephone = 2131034191;
+			// aapt resource value: 0x7f05004d
+			public const int telephone = 2131034189;
 			
 			// aapt resource value: 0x7f050003
 			public const int terrain = 2131034115;
 			
-			// aapt resource value: 0x7f050020
-			public const int textView1 = 2131034144;
+			// aapt resource value: 0x7f05001e
+			public const int textView1 = 2131034142;
+			
+			// aapt resource value: 0x7f05003e
+			public const int textView_Review = 2131034174;
 			
 			// aapt resource value: 0x7f050040
-			public const int textView_Review = 2131034176;
-			
-			// aapt resource value: 0x7f050042
-			public const int textView_addReview = 2131034178;
-			
-			// aapt resource value: 0x7f05000f
-			public const int textView_addRide = 2131034127;
+			public const int textView_addReview = 2131034176;
 			
 			// aapt resource value: 0x7f05000d
-			public const int textView_addStop = 2131034125;
+			public const int textView_addRide = 2131034125;
 			
 			// aapt resource value: 0x7f050009
 			public const int textView_byMap = 2131034121;
 			
-			// aapt resource value: 0x7f05001e
-			public const int textView_calcDay = 2131034142;
-			
-			// aapt resource value: 0x7f05001f
-			public const int textView_calcDayValue = 2131034143;
-			
-			// aapt resource value: 0x7f05001a
-			public const int textView_calcMonth = 2131034138;
-			
-			// aapt resource value: 0x7f05001b
-			public const int textView_calcMonthValue = 2131034139;
-			
 			// aapt resource value: 0x7f05001c
-			public const int textView_calcWeek = 2131034140;
+			public const int textView_calcDay = 2131034140;
 			
 			// aapt resource value: 0x7f05001d
-			public const int textView_calcWeekValue = 2131034141;
+			public const int textView_calcDayValue = 2131034141;
+			
+			// aapt resource value: 0x7f050018
+			public const int textView_calcMonth = 2131034136;
 			
 			// aapt resource value: 0x7f050019
-			public const int textView_calculate = 2131034137;
+			public const int textView_calcMonthValue = 2131034137;
 			
-			// aapt resource value: 0x7f050036
-			public const int textView_calculateCost = 2131034166;
+			// aapt resource value: 0x7f05001a
+			public const int textView_calcWeek = 2131034138;
 			
-			// aapt resource value: 0x7f050011
-			public const int textView_cancelAddRide = 2131034129;
+			// aapt resource value: 0x7f05001b
+			public const int textView_calcWeekValue = 2131034139;
 			
-			// aapt resource value: 0x7f050051
-			public const int textView_cancelSU = 2131034193;
+			// aapt resource value: 0x7f050017
+			public const int textView_calculate = 2131034135;
+			
+			// aapt resource value: 0x7f050034
+			public const int textView_calculateCost = 2131034164;
+			
+			// aapt resource value: 0x7f05000f
+			public const int textView_cancelAddRide = 2131034127;
+			
+			// aapt resource value: 0x7f05004f
+			public const int textView_cancelSU = 2131034191;
 			
 			// aapt resource value: 0x7f050007
 			public const int textView_currentLocation = 2131034119;
 			
-			// aapt resource value: 0x7f050025
-			public const int textView_emailAddress = 2131034149;
-			
-			// aapt resource value: 0x7f05003c
-			public const int textView_exampleMail = 2131034172;
-			
-			// aapt resource value: 0x7f05003e
-			public const int textView_examplePhone = 2131034174;
-			
-			// aapt resource value: 0x7f05002c
-			public const int textView_login = 2131034156;
+			// aapt resource value: 0x7f050023
+			public const int textView_emailAddress = 2131034147;
 			
 			// aapt resource value: 0x7f05003a
-			public const int textView_logout = 2131034170;
+			public const int textView_exampleMail = 2131034170;
 			
-			// aapt resource value: 0x7f05003b
-			public const int textView_mail = 2131034171;
+			// aapt resource value: 0x7f05003c
+			public const int textView_examplePhone = 2131034172;
 			
-			// aapt resource value: 0x7f050028
-			public const int textView_password = 2131034152;
-			
-			// aapt resource value: 0x7f05003d
-			public const int textView_phone = 2131034173;
-			
-			// aapt resource value: 0x7f050033
-			public const int textView_profile = 2131034163;
-			
-			// aapt resource value: 0x7f050021
-			public const int textView_rides = 2131034145;
-			
-			// aapt resource value: 0x7f050032
-			public const int textView_searchRide = 2131034162;
+			// aapt resource value: 0x7f05002a
+			public const int textView_login = 2131034154;
 			
 			// aapt resource value: 0x7f050038
-			public const int textView_share = 2131034168;
+			public const int textView_logout = 2131034168;
+			
+			// aapt resource value: 0x7f050039
+			public const int textView_mail = 2131034169;
+			
+			// aapt resource value: 0x7f050026
+			public const int textView_password = 2131034150;
+			
+			// aapt resource value: 0x7f05003b
+			public const int textView_phone = 2131034171;
+			
+			// aapt resource value: 0x7f050031
+			public const int textView_profile = 2131034161;
+			
+			// aapt resource value: 0x7f05001f
+			public const int textView_rides = 2131034143;
+			
+			// aapt resource value: 0x7f050030
+			public const int textView_searchRide = 2131034160;
+			
+			// aapt resource value: 0x7f050036
+			public const int textView_share = 2131034166;
+			
+			// aapt resource value: 0x7f050045
+			public const int textView_share_facebook = 2131034181;
 			
 			// aapt resource value: 0x7f050047
-			public const int textView_share_facebook = 2131034183;
+			public const int textView_share_twitter = 2131034183;
 			
-			// aapt resource value: 0x7f050049
-			public const int textView_share_twitter = 2131034185;
+			// aapt resource value: 0x7f05002c
+			public const int textView_signUp = 2131034156;
 			
-			// aapt resource value: 0x7f05002e
-			public const int textView_signUp = 2131034158;
+			// aapt resource value: 0x7f050042
+			public const int textView_viewRides = 2131034178;
 			
-			// aapt resource value: 0x7f050044
-			public const int textView_viewRides = 2131034180;
+			// aapt resource value: 0x7f050051
+			public const int user_name = 2131034193;
 			
-			// aapt resource value: 0x7f050053
-			public const int user_name = 2131034195;
-			
-			// aapt resource value: 0x7f05004c
-			public const int username = 2131034188;
+			// aapt resource value: 0x7f05004a
+			public const int username = 2131034186;
 			
 			static Id()
 			{

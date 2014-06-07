@@ -3,19 +3,9 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="BuenRide.iPhone/FlipsideViewController.cs" Line="62" Column="37" />
-      <File FileName="BuenRide.iPhone/Main.cs" Line="17" Column="1" />
-      <File FileName="BuenRide.iPhone/MainViewController.cs" Line="58" Column="1" />
+      <File FileName="BuenRide.iPhone/Main.cs" Line="1" Column="1" />
+      <File FileName="BuenRide.iPhone/MainViewController.cs" Line="12" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="BuenRide.iPhone" expanded="True">
-            <Node name="Resources" expanded="True" />
-            <Node name="MainStoryboard.storyboard" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
