@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide.Droid", "BuenRide\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide.iPhone", "BuenRide.iPhone\BuenRide.iPhone.csproj", "{0CCB9E3C-C7C7-4A95-9663-1CDE560FD2EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide.Portable", "BuenRide.Portable\BuenRide.Portable.csproj", "{743B0240-60AD-42FA-B0D1-C3454F73D644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,22 @@ Global
 		{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}.Release|iPhone.Build.0 = Release|Any CPU
 		{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|iPhone.Build.0 = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = BuenRide.iPhone\BuenRide.iPhone.csproj

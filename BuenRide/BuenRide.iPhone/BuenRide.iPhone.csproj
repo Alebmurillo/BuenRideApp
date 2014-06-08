@@ -146,4 +146,10 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuenRide.Portable\BuenRide.Portable.csproj">
+      <Project>{743B0240-60AD-42FA-B0D1-C3454F73D644}</Project>
+      <Name>BuenRide.Portable</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

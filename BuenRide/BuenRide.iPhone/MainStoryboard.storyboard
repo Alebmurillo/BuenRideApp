@@ -413,6 +413,7 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1"/>
                                 </state>
                                 <connections>
+                                    <action selector="UIButton496_TouchUpInside:" destination="665" id="746" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="499" fixedFrame="YES" text="Destination" shadowOffsetHeight="1" shadowOffsetWidth="1" translatesAutoresizingMaskIntoConstraints="NO">

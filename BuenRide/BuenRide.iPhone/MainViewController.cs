@@ -11,7 +11,6 @@ namespace BuenRide.iPhone
 {
 	public partial class MainViewController : UIViewController
 	{
-		var LocMgr = new CLLocationManager();
 
 		public MainViewController (IntPtr handle) : base (handle)
 		{
@@ -70,6 +69,11 @@ namespace BuenRide.iPhone
 			shareOnFacebook() ;
 		}
 
+		partial void UIButton496_TouchUpInside (UIButton sender)
+		{
+			getLocation();
+		}
+
 		public void shareOnTwitter() 
 		{
 			// 1. Create the service
@@ -104,6 +108,24 @@ namespace BuenRide.iPhone
 				DismissViewController (true, null);
 			});
 			PresentViewController (shareController, true, null);
+		}
+
+		public Portable.Location getLocation() 
+		{
+			var LocMgr = new CLLocationManager();
+			if (CLLocationManager.LocationServicesEnabled) {
+				LocMgr.StartMonitoringSignificantLocationChanges ();
+			} else {
+				Console.WriteLine ("Location services not enabled, please enable this in your Settings");
+			}
+			Portable.Location location = new Portable.Location ();
+			LocMgr.LocationsUpdated += (o, e) => {
+				location.latitude = LocMgr.Location.Coordinate.Latitude.ToString (); 
+				location.longitude = LocMgr.Location.Coordinate.Longitude.ToString (); 
+				Console.WriteLine ("Location "+ location.latitude + ", "+location.longitude);
+
+			};
+			return location;
 		}
 	}
 }

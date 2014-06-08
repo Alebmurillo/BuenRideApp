@@ -14,6 +14,10 @@ namespace BuenRide.iPhone
 	[Register ("MainViewController")]
 	partial class MainViewController
 	{
+		[Action ("UIButton496_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void UIButton496_TouchUpInside (UIButton sender);
+
 		[Action ("UIButton528_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void UIButton528_TouchUpInside (UIButton sender);
