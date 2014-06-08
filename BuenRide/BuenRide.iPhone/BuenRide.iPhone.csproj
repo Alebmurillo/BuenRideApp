@@ -97,6 +97,9 @@
     <Reference Include="Facebook">
       <HintPath>..\Components\facebook-sdk-6.2.1\lib\ios\Facebook.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMaps">
+      <HintPath>..\Components\googlemapsios-1.8.0\lib\ios\GoogleMaps.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -120,6 +123,10 @@
     <Compile Include="FlipsideViewController.designer.cs">
       <DependentUpon>FlipsideViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MapViewController.cs" />
+    <Compile Include="MapViewController.designer.cs">
+      <DependentUpon>MapViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
@@ -127,13 +134,15 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.social">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.1.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="facebook-sdk">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>6.2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googlemapsios">
+      <Version>1.8.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

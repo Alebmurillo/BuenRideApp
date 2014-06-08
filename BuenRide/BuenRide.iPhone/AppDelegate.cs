@@ -5,6 +5,8 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
+using Google.Maps;
+
 namespace BuenRide.iPhone
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -14,10 +16,18 @@ namespace BuenRide.iPhone
 	public partial class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
+
+		const string MapsApiKey = "AIzaSyBKLJ6pOaSzWJ7_w7msvmLsRzRXBgo_G6s";
 		
 		public override UIWindow Window {
 			get;
 			set;
+		}
+
+		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+		{
+			MapServices.ProvideAPIKey (MapsApiKey);
+			return true;
 		}
 		
 		// This method is invoked when the application is about to move from active to inactive state.

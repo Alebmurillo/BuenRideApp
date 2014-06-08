@@ -5,10 +5,14 @@ using MonoTouch.Foundation;
 using Xamarin.Social;
 using Xamarin.Social.Services;
 
+using MonoTouch.CoreLocation;
+
 namespace BuenRide.iPhone
 {
 	public partial class MainViewController : UIViewController
 	{
+		var LocMgr = new CLLocationManager();
+
 		public MainViewController (IntPtr handle) : base (handle)
 		{
 			// Custom initialization
@@ -71,7 +75,7 @@ namespace BuenRide.iPhone
 			// 1. Create the service
 			var twitter = new TwitterService { ConsumerKey= "jt8zcYZSrrwuVn6cgHuW6mcou",
 				ConsumerSecret ="APh7LVOQBHw6J8DVmCcC9tRGUBQbitn5o9CzNN3mlvzG7ZNKJr",
-				CallbackUrl = new Uri ("https://api.twitter.com/1.1/")};       
+				CallbackUrl = new Uri ("https://twitter.com/")};       
 			// 2. Create an item to share
 			var item = new Item { Text = "Xamarin.Social is the bomb.com." };
 			item.Links.Add (new Uri ("http://github.com/xamarin/xamarin.social"));
@@ -88,7 +92,6 @@ namespace BuenRide.iPhone
 			// 1. Create the service
 			var facebook = new FacebookService {
 				ClientId = "238624846333637",
-				RedirectUrl = new System.Uri ("<Redirect URL from developers.facebook.com/apps>")
 			};
 
 			// 2. Create an item to share

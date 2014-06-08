@@ -400,6 +400,7 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1"/>
                                 </state>
                                 <connections>
+                                    <segue destination="721" kind="push" id="731"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="496" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
@@ -433,6 +434,7 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1"/>
                                 </state>
                                 <connections>
+                                    <segue destination="721" kind="push" id="733"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="503" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
@@ -844,6 +846,7 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1"/>
                                 </state>
                                 <connections>
+                                    <segue destination="721" kind="push" id="729"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="620" fixedFrame="YES" text="Kilometers" shadowOffsetHeight="1" shadowOffsetWidth="1" translatesAutoresizingMaskIntoConstraints="NO">
@@ -894,6 +897,7 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1"/>
                                 </state>
                                 <connections>
+                                    <segue destination="721" kind="push" id="727"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="615" fixedFrame="YES" text="Start Point" shadowOffsetHeight="1" shadowOffsetWidth="1" translatesAutoresizingMaskIntoConstraints="NO">
@@ -911,6 +915,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="696" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2180" y="-490"/>
+        </scene>
+        <scene sceneID="720">
+            <objects>
+                <viewController id="721" sceneMemberID="viewController" customClass="MapViewController" storyboardIdentifier="MapView">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="723"/>
+                        <viewControllerLayoutGuide type="bottom" id="724"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="722">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="725" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2912" y="19"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
