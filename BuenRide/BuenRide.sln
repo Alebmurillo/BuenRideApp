@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide.Droid", "BuenRide\BuenRide.Droid.csproj", "{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide", "BuenRide\BuenRide.csproj", "{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide.iPhone", "BuenRide.iPhone\BuenRide.iPhone.csproj", "{0CCB9E3C-C7C7-4A95-9663-1CDE560FD2EA}"
 EndProject
