@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
-        resources :personas, format: :json
-        resources :reviews, format: :json
-        resources :lugars, format: :json
-        resources :usuarios, format: :json
+        resources :personas, format: :json, except: [:destroy,  :update]
+        resources :reviews, format: :json, except: [:destroy,  :update]
+        resources :lugars, format: :json, except: [:destroy,  :update]
+        resources :usuarios, format: :json, except: [:destroy, :update]
   end
 #        resources :usuarios, :defaults => { :format => 'json' }
 

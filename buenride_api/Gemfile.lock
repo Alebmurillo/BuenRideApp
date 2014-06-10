@@ -36,6 +36,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    daemon_controller (1.2.0)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -57,6 +58,10 @@ GEM
     minitest (5.3.4)
     multi_json (1.10.1)
     mysql2 (0.3.16)
+    passenger (4.0.44)
+      daemon_controller (>= 1.2.0)
+      rack
+      rake (>= 0.8.1)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-cors (0.2.9)
@@ -122,6 +127,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mysql2
+  passenger
   rack-cors
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)

@@ -4,6 +4,11 @@ class UsuariosController < ApplicationController
     PER_PAGE_RECORDS=9
     
     skip_before_filter :verify_authenticity_token
+  
+    def fetch_user
+      @usuario = Usuario.find_by_id(params[:id])
+    end  
+  
     def index
       usuarios_paginated= Usuario.order('id').page(params[:page]).per(PER_PAGE_RECORDS)
       json_response={
@@ -22,16 +27,23 @@ class UsuariosController < ApplicationController
       @usuario.save
       respond_with @usuario, location: nil
     end
-    
+#    def createReview
+#
+#      @usuario = fetch_user()
+#      @review = @usuario.reviews.create({:comentario => params[:comentario], :calificacion=> params[:calificacion], :submitted_by=> params[:submitted_by]})
+#
+#      @usuario.save
+#      respond_with @usuario, location: nil
+#    end
     def show
-      respond_with usuario.find(params[:id])
+      respond_with Usuario.find(params[:id])
     end
     def update
-      respond_with usuario.update(params[:id], usuario_params)
+      respond_with Usuario.update(params[:id], usuario_params)
 
     end
     def destroy
-      respond_with usuario.destroy(params[:id])
+      respond_with Usuario.destroy(params[:id])
     end
     private
     def usuario_params
