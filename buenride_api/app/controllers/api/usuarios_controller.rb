@@ -9,10 +9,18 @@ class UsuariosController < ApplicationController
   
     def login
       @hashed_password = Digest::SHA2.hexdigest(params[:password])
+      @user = Usuario.find_by_email(params[:email]) 
+      if @user== nil
+        json_response={
+          error: 'user doest exist '
+        }
+         respond_with json_response, location: nil
+      end
+      if @user != nil
       @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password) 
       if @usuario== nil
         json_response={
-          error: 'login error '
+          error: 'password incorrect '
 
         }
          respond_with json_response, location: nil
@@ -22,6 +30,7 @@ class UsuariosController < ApplicationController
          apikey: @usuario.apikey
        }
          respond_with json_response, location: nil
+      end
       end
       
     end  
