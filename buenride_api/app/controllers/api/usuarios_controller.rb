@@ -4,12 +4,26 @@ class UsuariosController < ApplicationController
     PER_PAGE_RECORDS=9
     #before_filter :restrict_access 
     skip_before_filter :verify_authenticity_token
-  
+#  before_action :authenticate	
+
   
     def login
       @hashed_password = Digest::SHA2.hexdigest(params[:password])
-      @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password)
-      respond_with @usuario, location: nil
+      @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password) 
+      if @usuario== nil
+        json_response={
+          error: 'login error '
+
+        }
+         respond_with json_response, location: nil
+      end
+      if @usuario!= nil
+      json_response={
+         apikey: @usuario.apikey
+       }
+         respond_with json_response, location: nil
+      end
+      
     end  
   
     def index
@@ -47,6 +61,15 @@ class UsuariosController < ApplicationController
     def destroy
       respond_with Usuario.destroy(params[:id])
     end
+#    protected	
+#      def authenticate	
+#        authenticate_or_request_with_http_token do |token, options|	
+#        User.find_by(auth_token: token)	
+#    end	
+#     end	
+
+    
+    
     private
     def usuario_params
       params.require(:usuario).permit(:username , :password, :apikey,:nombre, :email, :telefono)
