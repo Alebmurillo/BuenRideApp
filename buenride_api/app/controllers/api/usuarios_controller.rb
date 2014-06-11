@@ -10,14 +10,16 @@ class UsuariosController < ApplicationController
     end  
   
     def index
-      usuarios = Usuario.order('id')
+      usuarios= Usuario.order('id')
+      
       respond_with usuarios 
     end
     def new
       
     end
     def create
-      @usuario = Usuario.new({:username => params[:username], :password => params[:password], :apikey => params[:apikey]})
+      #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
+      @usuario = Usuario.new({:username => params[:username], :password => params[:password], :apikey => params[:apikey],:nombre => params[:name], :email=> params[:email], :telefono => params[:phone]})
       @usuario.save
       respond_with @usuario, location: nil
     end
@@ -41,7 +43,9 @@ class UsuariosController < ApplicationController
     end
     private
     def usuario_params
-      params.require(:usuario).permit(:username , :password, :apikey)
+      params.require(:usuario).permit(:username , :password, :apikey,:nombre, :email, :telefono)
+      #params.require(:persona).permit(:nombre, :email, :telefono, :home_latitud, :home_longitud)
+
     end
 end
 end
