@@ -2,11 +2,12 @@ module Api
 class UsuariosController < ApplicationController
   respond_to :json
     PER_PAGE_RECORDS=9
-    
+    #before_filter :restrict_access 
     skip_before_filter :verify_authenticity_token
   
-    def fetch_user
-      @usuario = Usuario.find_by_id(params[:id])
+    def login
+      @usuario = Usuario.find_by_email_and_password(params[:email],params[:password])
+      respond_with @usuario, location: nil
     end  
   
     def index
@@ -18,8 +19,9 @@ class UsuariosController < ApplicationController
       
     end
     def create
+      @apikey =SecureRandom.hex.to_s
       #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
-      @usuario = Usuario.new({:username => params[:username], :password => params[:password], :apikey => params[:apikey],:nombre => params[:name], :email=> params[:email], :telefono => params[:phone]})
+      @usuario = Usuario.new({:username => params[:username], :password => params[:password], :apikey => @apikey,:nombre => params[:name], :email=> params[:email], :telefono => params[:phone]})
       @usuario.save
       respond_with @usuario, location: nil
     end

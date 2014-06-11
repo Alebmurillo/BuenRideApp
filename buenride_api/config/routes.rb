@@ -3,7 +3,11 @@ Rails.application.routes.draw do
         resources :rides, format: :json, except: [:destroy,  :update]
         resources :reviews, format: :json, except: [:destroy,  :update]
         resources :lugars, format: :json, except: [:destroy,  :update]
-        resources :usuarios, format: :json, except: [:destroy, :update]
+        resources :usuarios, format: :json, except: [:destroy, :update] do
+          collection do
+            post 'login'
+          end
+        end
   end
 #        resources :usuarios, :defaults => { :format => 'json' }
 
