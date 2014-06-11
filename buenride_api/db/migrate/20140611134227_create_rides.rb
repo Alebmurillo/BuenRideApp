@@ -1,0 +1,13 @@
+class CreateRides < ActiveRecord::Migration
+  def change
+    create_table :rides do |t|
+      t.string :observations
+      t.string :startPointLat
+      t.string :startPointLong
+      t.string :destPointLat
+      t.string :destPointLong
+
+      t.timestamps
+    end
+  end
+end

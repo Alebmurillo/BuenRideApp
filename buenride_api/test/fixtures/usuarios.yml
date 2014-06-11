@@ -4,8 +4,14 @@ one:
   username: MyString
   password: MyString
   apikey: MyString
+  nombre: MyString
+  email: MyString
+  telefono: MyString
 
 two:
   username: MyString
   password: MyString
   apikey: MyString
+  nombre: MyString
+  email: MyString
+  telefono: MyString

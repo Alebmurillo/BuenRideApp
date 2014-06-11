@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  observations: MyString
+  startPointLat: MyString
+  startPointLong: MyString
+  destPointLat: MyString
+  destPointLong: MyString
+
+two:
+  observations: MyString
+  startPointLat: MyString
+  startPointLong: MyString
+  destPointLat: MyString
+  destPointLong: MyString

@@ -11,22 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526003102) do
+ActiveRecord::Schema.define(version: 20140611141731) do
 
   create_table "lugars", force: true do |t|
     t.string   "nombre_lugar"
     t.string   "lugar_latitud"
     t.string   "lugar_longitud"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "personas", force: true do |t|
-    t.string   "nombre"
-    t.string   "email"
-    t.string   "telefono"
-    t.string   "home_latitud"
-    t.string   "home_longitud"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,10 +29,23 @@ ActiveRecord::Schema.define(version: 20140526003102) do
     t.datetime "updated_at"
   end
 
+  create_table "rides", force: true do |t|
+    t.string   "observations"
+    t.string   "startPointLat"
+    t.string   "startPointLong"
+    t.string   "destPointLat"
+    t.string   "destPointLong"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "usuarios", force: true do |t|
     t.string   "username"
     t.string   "password"
     t.string   "apikey"
+    t.string   "nombre"
+    t.string   "email"
+    t.string   "telefono"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
