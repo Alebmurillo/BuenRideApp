@@ -4,7 +4,7 @@ class RidesController < ApplicationController
   respond_to :json
     PER_PAGE_RECORDS=9
     
-    skip_before_filter :verify_authenticity_token
+    #skip_before_filter :verify_authenticity_token
   
     def fetch_ride
       @ride = Ride.find_by_id(params[:id])

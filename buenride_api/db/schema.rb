@@ -22,9 +22,10 @@ ActiveRecord::Schema.define(version: 20140611141731) do
   end
 
   create_table "reviews", force: true do |t|
+    t.integer  "usuario_id"
     t.string   "comentario"
     t.string   "calificacion"
-    t.string   "submitted_by"
+    t.integer  "submitted_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

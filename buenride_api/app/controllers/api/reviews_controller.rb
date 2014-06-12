@@ -6,22 +6,40 @@ class ReviewsController < ApplicationController
     
     skip_before_filter :verify_authenticity_token
     def index
-      reviews_paginated= Review.order('id').page(params[:page]).per(PER_PAGE_RECORDS)
-      json_response={
-        models: reviews_paginated,
-        current_page: params[:page].to_i,
-        perPage:PER_PAGE_RECORDS,
-        total_page: reviews_paginated.num_pages
-      }
-      respond_with json_response     
+      reviews= Review.order('id')      
+      
+      respond_with reviews     
     end
     def new
       
     end
     def create
-      @review = Review.new({:comentario => params[:comentario], :calificacion=> params[:calificacion], :submitted_by=> params[:submitted_by]})
-      @review.save
-      respond_with @review, location: nil
+      @usuario=Usuario.find_by_apikey(params[:apikey])
+      if @usuario!=nil
+          @review = Review.new({:comentario => params[:comentario], :calificacion=> params[:calificacion]})
+          @review.submitted_by=@usuario
+          @usuariodest= Usuario.find_by_username(params[:username])
+          if @usuariodest!=nil
+              @review.usuario = @usuariodest
+              @review.save
+              respond_with @review, location: nil
+          end
+          if @usuariodest==nil
+              json_response={
+                error: 'usuario destino incorrecto'
+
+              }
+               respond_with json_response, location: nil
+          end
+      end
+       if @usuario== nil
+        json_response={
+          error: 'usuario incorrecto'
+
+        }
+         respond_with json_response, location: nil
+      end
+     
     end
     
     def show
@@ -36,7 +54,7 @@ class ReviewsController < ApplicationController
     end
     private
     def review_params
-      params.require(:review).permit(:comentario, :calificacion, :submitter_by)
+      params.require(:review).permit(:comentario, :calificacion)
     end
   end
 end
