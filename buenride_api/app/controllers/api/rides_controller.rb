@@ -24,10 +24,25 @@ class RidesController < ApplicationController
    #  :startPointLong
    # :destPointLat
    #    :destPointLong
+   #    
+      @usuario=Usuario.find_by_apikey(params[:apikey])
+      if @usuario!=nil
       #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
       @ride = Ride.new({:observations => params[:observations], :startPointLat => params[:startPointLat], :startPointLong => params[:startPointLong],:destPointLat => params[:destPointLat], :destPointLong=> params[:destPointLong]})
+      
+      @ride.usuario= @usuario
       @ride.save
+
       respond_with @ride, location: nil
+      end
+       if @usuario== nil
+        json_response={
+          error: 'usuario incorrecto'
+
+        }
+         respond_with json_response, location: nil
+      end
+      
     end
 #    def createReview
 #

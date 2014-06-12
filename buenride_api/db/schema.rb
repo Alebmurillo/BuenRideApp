@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140611141731) do
   end
 
   create_table "rides", force: true do |t|
+    t.integer  "usuario_id"
     t.string   "observations"
     t.string   "startPointLat"
     t.string   "startPointLong"

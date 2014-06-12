@@ -12,7 +12,7 @@ class UsuariosController < ApplicationController
       @user = Usuario.find_by_email(params[:email]) 
       if @user== nil
         json_response={
-          error: 'user doest exist '
+          error: 'user doesnt exist'
         }
          respond_with json_response, location: nil
       end
@@ -20,16 +20,16 @@ class UsuariosController < ApplicationController
       @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password) 
       if @usuario== nil
         json_response={
-          error: 'password incorrect '
+          error: 'password incorrect'
 
         }
          respond_with json_response, location: nil
       end
       if @usuario!= nil
-      json_response={
-         apikey: @usuario.apikey
-       }
-         respond_with json_response, location: nil
+#      json_response={
+#         apikey: @usuario.apikey
+#       }
+         respond_with @usuario, location: nil
       end
       end
       
@@ -38,11 +38,12 @@ class UsuariosController < ApplicationController
     def index
       usuarios= Usuario.order('id')
       
-      respond_with usuarios 
+      respond_with usuarios , location: nil
     end
     def new
       
     end
+    
     def create
       #self.salt = ActiveSupport::SecureRandom.base64(8)
       @hashed_password = Digest::SHA2.hexdigest(params[:password])
