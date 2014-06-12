@@ -146,9 +146,10 @@ namespace BuenRide.iPhone
 		{
 			logIn ();
 		}	
+
 		partial void SU_SignUpButton_TouchUpInside (UIButton sender)
 		{
-			addUser ();
+			addUser();
 		}
 
 		
@@ -169,21 +170,7 @@ namespace BuenRide.iPhone
 			Console.WriteLine (content);
 		}
 
-		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
-		{
-			base.PrepareForSegue (segue, sender);
 
-			// do first a control on the Identifier for your segue
-			if (segue.Identifier.Equals("menu2addRide")) {
-
-				var view = (MainViewController)segue.DestinationViewController;
-				view.user = user;
-			}
-			else if (segue.Identifier.Equals("menu2addRide")) {
-				var view = (MainViewController)segue.DestinationViewController;
-				view.user = user;
-			}
-		}
 
 		public void logIn() {
 			var request = new RestRequest("api/usuarios/login/", Method.POST);

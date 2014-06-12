@@ -154,6 +154,10 @@ namespace BuenRide.iPhone
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void AR_CurrentLoc2_TouchUpInside (UIButton sender);
 
+		[Action ("SU_SignUpButton_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void SU_SignUpButton_TouchUpInside (UIButton sender);
+
 		[Action ("UIButton135_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void UIButton135_TouchUpInside (UIButton sender);

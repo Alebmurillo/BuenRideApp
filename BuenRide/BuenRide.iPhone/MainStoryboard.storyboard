@@ -946,6 +946,7 @@
                                 <connections>
                                     <segue destination="457" kind="modal" id="470"/>
                                     <action selector="SU_SignUpButton_TouchUpInside:" destination="475" id="797" eventType="touchUpInside"/>
+                                    <action selector="SU_SignUpButton_TouchUpInside:" destination="838" id="889" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" id="394" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
