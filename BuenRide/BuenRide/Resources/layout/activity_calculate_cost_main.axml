@@ -200,7 +200,7 @@
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="4"
-                android:text="Gas per Liter"
+                android:text="Gas cost per Liter"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />

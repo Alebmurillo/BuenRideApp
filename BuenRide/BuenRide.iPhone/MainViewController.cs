@@ -5,17 +5,38 @@ using MonoTouch.Foundation;
 using Xamarin.Social;
 using Xamarin.Social.Services;
 
+using System.Collections.Generic;
+
 using MonoTouch.CoreLocation;
+
+using RestSharp;
+
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BuenRide.iPhone
 {
 	public partial class MainViewController : UIViewController
 	{
+	
+		public Portable.Location gpsLocation {
+			get;
+			set;
+		}
+
+		public Portable.Usuario user {
+			get;
+			set;
+		}
+
+		RestClient client = new RestClient ("http://www.buenrideapp.com");
+
 
 		public MainViewController (IntPtr handle) : base (handle)
 		{
 			// Custom initialization
 			this.View.InsertSubview (new UIImageView (UIImage.FromBundle ("background2.jpg")), 0);
+			gpsLocation = new Portable.Location("0","0");
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -69,9 +90,64 @@ namespace BuenRide.iPhone
 			shareOnFacebook() ;
 		}
 
-		partial void UIButton496_TouchUpInside (UIButton sender)
+		partial void AR_CurrentLoc1_TouchUpInside (UIButton sender)
 		{
 			getLocation();
+		}
+
+		partial void SU_SignUpButton_TouchUpInside (UIButton sender)
+		{
+			addUser();
+		}
+
+		partial void LI_SignInButton_TouchUpInside (UIButton sender)
+		{
+			logIn();
+		}
+
+
+		public void logIn() {
+			var request = new RestRequest("api/usuarios/login/", Method.POST);
+			request.RequestFormat = DataFormat.Json;
+			request.AddParameter ("email", this.LI_EmailTextField.Text);
+			request.AddParameter ("password", this.LI_PasswordTextField.Text);
+			// execute the request
+			IRestResponse response = client.Execute(request);
+			var content = response.Content; // raw content as string
+			Console.WriteLine (content);
+			if (!content.Equals("{\"error\":\"user doest exist \"}") && !content.Equals("{\"error\":\"password incorrect \"}")) {
+				user = JsonConvert.DeserializeObject<Portable.Usuario>(content);
+				Console.WriteLine (user.nombre);
+				UIStoryboard board = UIStoryboard.FromName ("MainStoryboard", null);
+				UINavigationController ctrl = (UINavigationController)board.InstantiateViewController ("MenuNavController");
+				ctrl.ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;
+				this.PresentViewController (ctrl, true, null);
+			} else {
+				Console.WriteLine (content);
+			}
+		}
+			
+		public void addUser() {
+			var request = new RestRequest("api/usuarios/", Method.POST);
+			request.RequestFormat = DataFormat.Json;
+			request.AddParameter ("name", this.SU_NameTextField.Text);
+			request.AddParameter ("email", this.SU_EmailTextField.Text);
+			request.AddParameter ("username", this.SU_UsernameTextField.Text);
+			request.AddParameter ("password", this.SU_PasswordTextField.Text);
+			request.AddParameter ("phone", this.SU_PhoneTextField.Text);
+			// execute the request
+			IRestResponse response = client.Execute(request);
+			var content = response.Content; // raw content as string
+			Console.WriteLine (content);
+		}
+
+		public void getUsers() {
+			var request = new RestRequest (String.Format ("api/usuarios/", Method.GET));
+			IRestResponse response2 = client.Execute(request);
+			Console.WriteLine (response2.Content);
+
+
+			//client.ExecuteAsync<Portable.Usuario> (request, response => { Console.WriteLine (response.Data.username); });
 		}
 
 		public void shareOnTwitter() 
