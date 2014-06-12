@@ -5,7 +5,7 @@ class UsuariosController < ApplicationController
     #before_filter :restrict_access 
     skip_before_filter :verify_authenticity_token
 #  before_action :authenticate	
-
+  
   
     def login
       @hashed_password = Digest::SHA2.hexdigest(params[:password])
