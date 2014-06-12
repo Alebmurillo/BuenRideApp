@@ -1,25 +1,16 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BuenRide.iPhone/MainViewController.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="BuenRide.iPhone/MainViewController.cs" Line="90" Column="16" />
-      <File FileName="BuenRide.Portable/Lugar.cs" Line="1" Column="1" />
-      <File FileName="BuenRide.iPhone/MapViewController.cs" Line="34" Column="59" />
+      <File FileName="BuenRide.iPhone/MainViewController.cs" Line="128" Column="3" />
+      <File FileName="Components/facebookios-3.14.1/samples/FacebookiOSSample/FacebookiOSSample/DVCLogIn.cs" Line="29" Column="12" />
+      <File FileName="BuenRide.iPhone/AppDelegate.cs" Line="24" Column="48" />
+      <File FileName="BuenRide.iPhone/Info.plist" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="BuenRide" expanded="True">
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="Resources" expanded="True">
-              <Node name="layout" expanded="True" />
-            </Node>
-          </Node>
-          <Node name="BuenRide.iPhone" expanded="True">
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="MainViewController.cs" selected="True" />
-          </Node>
-          <Node name="BuenRide.Portable" expanded="True" />
+          <Node name="Auth0Client.iOS.Sample" expanded="True" />
         </State>
       </Pad>
     </Pads>
