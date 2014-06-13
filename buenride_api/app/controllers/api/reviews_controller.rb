@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
     PER_PAGE_RECORDS=9
     
     skip_before_filter :verify_authenticity_token
+
     def index
       reviews= Review.order('id')      
       

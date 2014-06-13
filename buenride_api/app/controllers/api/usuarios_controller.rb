@@ -4,38 +4,60 @@ class UsuariosController < ApplicationController
     PER_PAGE_RECORDS=9
     #before_filter :restrict_access 
     skip_before_filter :verify_authenticity_token
-#  before_action :authenticate	
-  
-  
+    before_action :authenticate	
+    before_action :check_authentication,  except: [ :create, :login ]	
+    def logout
+      @token = request.headers[:token]
+      @user = Usuario.find_by_apikey(@token) 
+      if @user !=nil
+        @user.apikey=nil
+        @user.save
+        json_response={
+            message: 'logout success'
+          }
+           respond_with json_response, location: nil
+      end
+       if @user ==nil
+        json_response={
+              message: 'logout fail'
+        }
+        respond_with json_response, location: nil
+      end
+    end
     def login
-      @hashed_password = Digest::SHA2.hexdigest(params[:password])
+      
+      source = "#{params[:password]}/#{params[:email]}"
+      @hashed_password = Digest::SHA2.hexdigest(source)
       @user = Usuario.find_by_email(params[:email]) 
       if @user== nil
         json_response={
-          error: 'user doesnt exist'
+          error: 'user or password incorrect'
         }
          respond_with json_response, location: nil
       end
       if @user != nil
-      @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password) 
-      if @usuario== nil
-        json_response={
-          error: 'password incorrect'
+          @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password) 
+          if @usuario== nil
+            json_response={
+              error: 'user or password incorrect'
 
-        }
-         respond_with json_response, location: nil
-      end
-      if @usuario!= nil
-#      json_response={
-#         apikey: @usuario.apikey
-#       }
-         respond_with @usuario, location: nil
-      end
+            }
+             respond_with json_response, location: nil
+          end
+          if @usuario!= nil
+    #      json_response={
+    #         apikey: @usuario.apikey
+    #       }
+             @apikey =SecureRandom.hex.to_s
+              @usuario.apikey=@apikey
+              @usuario.save
+             respond_with @usuario, location: nil
+          end
       end
       
     end  
   
-    def index
+    def getUsuarios
       usuarios= Usuario.order('id')
       
       respond_with usuarios , location: nil
@@ -46,10 +68,12 @@ class UsuariosController < ApplicationController
     
     def create
       #self.salt = ActiveSupport::SecureRandom.base64(8)
-      @hashed_password = Digest::SHA2.hexdigest(params[:password])
-      @apikey =SecureRandom.hex.to_s
+      source = "#{params[:password]}/#{params[:email]}"
+      @hashed_password = Digest::SHA2.hexdigest(source)
+      #@hashed_password = BCrypt::Password.create(params[:password])
+      #@apikey =SecureRandom.hex.to_s
       #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
-      @usuario = Usuario.new({:username => params[:username], :password => @hashed_password, :apikey => @apikey,:nombre => params[:name], :email=> params[:email], :telefono => params[:phone]})
+      @usuario = Usuario.new({:username => params[:username], :password => @hashed_password,:nombre => params[:name], :email=> params[:email], :telefono => params[:phone]})
       @usuario.save
       respond_with @usuario, location: nil
     end
@@ -86,5 +110,6 @@ class UsuariosController < ApplicationController
       #params.require(:persona).permit(:nombre, :email, :telefono, :home_latitud, :home_longitud)
 
     end
+    
 end
 end

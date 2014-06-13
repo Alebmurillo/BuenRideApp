@@ -4,22 +4,6 @@ class Usuario < ActiveRecord::Base
   #has_many :reviews, :foreign_key => 'usuario_id', :class_name => "Usuario", dependent: :destroy
   validates :email,:username, :password, :presence =>true
   validates_uniqueness_of :username , :email
-    
-#  before_create :set_auth_token	
-#
-#  private	
-#
-#  def set_auth_token	
-#    return if auth_token.present?	
-#    self.auth_token = generate_auth_token	
-#  end	
-#  
-#  def generate_auth_token	
-#    loop do	
-#      token = SecureRandom.hex	
-#      break token unless self.class.exists?(auth_token: token)	
-#    end	
-#  end
 
   
 end

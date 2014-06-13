@@ -5,7 +5,8 @@ class RidesController < ApplicationController
     PER_PAGE_RECORDS=9
     
     skip_before_filter :verify_authenticity_token
-  
+        before_action :authenticate	
+
     def fetch_ride
       @ride = Ride.find_by_id(params[:id])
     end  
