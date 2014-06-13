@@ -94,9 +94,6 @@
     <Reference Include="Xamarin.Social.iOS">
       <HintPath>..\Components\xamarin.social-1.1.1\lib\ios\Xamarin.Social.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook">
-      <HintPath>..\Components\facebook-sdk-6.2.1\lib\ios\Facebook.dll</HintPath>
-    </Reference>
     <Reference Include="GoogleMaps">
       <HintPath>..\Components\googlemapsios-1.8.0\lib\ios\GoogleMaps.dll</HintPath>
     </Reference>
@@ -105,6 +102,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Components\json.net-4.5.11\lib\ios\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTouch.FacebookConnect">
+      <HintPath>..\Components\facebookios-3.14.1\lib\ios\MonoTouch.FacebookConnect.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -143,10 +143,6 @@
       <Version>1.1.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
-    <XamarinComponentReference Include="facebook-sdk">
-      <Version>6.2.1</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
     <XamarinComponentReference Include="googlemapsios">
       <Version>1.8.0</Version>
       <Visible>False</Visible>
@@ -156,8 +152,11 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="json.net">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="facebookios">
+      <Version>3.14.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

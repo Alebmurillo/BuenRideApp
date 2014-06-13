@@ -88,11 +88,27 @@ namespace BuenRide.iPhone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton LI_SignInButton { get; set; }
+		UIView LI_SignInButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton LI_SignUpButton { get; set; }
+		UILabel P_mail { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel P_Name { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel P_phone { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITableView P_TableView { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITableView R_TableView { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -101,10 +117,6 @@ namespace BuenRide.iPhone
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton Sh_TwButton { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton SU_CancelButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -130,17 +142,25 @@ namespace BuenRide.iPhone
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField SU_UsernameTextField { get; set; }
 
+		[Action ("AR_AddButton_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void AR_AddButton_TouchUpInside (UIButton sender);
+
 		[Action ("AR_CurrentLoc1_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void AR_CurrentLoc1_TouchUpInside (UIButton sender);
 
-		[Action ("LI_SignInButton_TouchUpInside:")]
+		[Action ("AR_CurrentLoc2_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void LI_SignInButton_TouchUpInside (UIButton sender);
+		partial void AR_CurrentLoc2_TouchUpInside (UIButton sender);
 
 		[Action ("SU_SignUpButton_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void SU_SignUpButton_TouchUpInside (UIButton sender);
+
+		[Action ("UIButton135_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void UIButton135_TouchUpInside (UIButton sender);
 
 		[Action ("UIButton528_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -228,9 +248,25 @@ namespace BuenRide.iPhone
 				LI_SignInButton.Dispose ();
 				LI_SignInButton = null;
 			}
-			if (LI_SignUpButton != null) {
-				LI_SignUpButton.Dispose ();
-				LI_SignUpButton = null;
+			if (P_mail != null) {
+				P_mail.Dispose ();
+				P_mail = null;
+			}
+			if (P_Name != null) {
+				P_Name.Dispose ();
+				P_Name = null;
+			}
+			if (P_phone != null) {
+				P_phone.Dispose ();
+				P_phone = null;
+			}
+			if (P_TableView != null) {
+				P_TableView.Dispose ();
+				P_TableView = null;
+			}
+			if (R_TableView != null) {
+				R_TableView.Dispose ();
+				R_TableView = null;
 			}
 			if (Sh_FbButton != null) {
 				Sh_FbButton.Dispose ();
@@ -239,10 +275,6 @@ namespace BuenRide.iPhone
 			if (Sh_TwButton != null) {
 				Sh_TwButton.Dispose ();
 				Sh_TwButton = null;
-			}
-			if (SU_CancelButton != null) {
-				SU_CancelButton.Dispose ();
-				SU_CancelButton = null;
 			}
 			if (SU_EmailTextField != null) {
 				SU_EmailTextField.Dispose ();

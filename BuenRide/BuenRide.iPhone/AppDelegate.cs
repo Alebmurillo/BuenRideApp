@@ -6,6 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 using Google.Maps;
+using MonoTouch.FacebookConnect;
 
 namespace BuenRide.iPhone
 {
@@ -18,6 +19,10 @@ namespace BuenRide.iPhone
 		// class-level declarations
 
 		const string MapsApiKey = "AIzaSyBKLJ6pOaSzWJ7_w7msvmLsRzRXBgo_G6s";
+
+		// Get your own App ID at developers.facebook.com/apps
+		const string FacebookAppId = "238624846333637";
+		const string DisplayName = "buenrideapp";
 		
 		public override UIWindow Window {
 			get;
@@ -27,6 +32,8 @@ namespace BuenRide.iPhone
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			MapServices.ProvideAPIKey (MapsApiKey);
+			FBSettings.DefaultAppID = FacebookAppId;
+			FBSettings.DefaultDisplayName = DisplayName;
 			return true;
 		}
 		
@@ -51,6 +58,20 @@ namespace BuenRide.iPhone
 		// This method is called when the application is about to terminate. Save data, if needed.
 		public override void WillTerminate (UIApplication application)
 		{
+		}
+
+		public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+		{
+			// We need to handle URLs by passing them to FBSession in order for SSO authentication
+			// to work.
+			return FBSession.ActiveSession.HandleOpenURL(url);
+		}
+
+		public override void OnActivated (UIApplication application)
+		{
+			// We need to properly handle activation of the application with regards to SSO
+			// (e.g., returning from iOS 6.0 authorization dialog or from fast app switching).
+			FBSession.ActiveSession.HandleDidBecomeActive();
 		}
 	}
 }

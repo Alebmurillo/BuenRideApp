@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using MonoTouch.CoreLocation;
 
 using RestSharp;
+using MonoTouch.FacebookConnect;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -24,19 +25,39 @@ namespace BuenRide.iPhone
 			set;
 		}
 
+		public Portable.Location startLocation {
+			get;
+			set;
+		}
+
+		public Portable.Location destLocation {
+			get;
+			set;
+		}
+
 		public Portable.Usuario user {
 			get;
 			set;
 		}
 
-		RestClient client = new RestClient ("http://www.buenrideapp.com");
+		// For extensive list of available extended permissions refer to 
+		// https://developers.facebook.com/docs/reference/api/permissions/
+		private string [] ExtendedPermissions = new [] { "user_about_me", "read_stream"};
 
+		RestClient client = new RestClient ("http://www.buenrideapp.com");
+		FBLoginView loginView;
+		IFBGraphUser FbUser;
+
+		private int FB_Y;
 
 		public MainViewController (IntPtr handle) : base (handle)
 		{
 			// Custom initialization
+			FB_Y = 600;
 			this.View.InsertSubview (new UIImageView (UIImage.FromBundle ("background2.jpg")), 0);
 			gpsLocation = new Portable.Location("0","0");
+			startLocation = new Portable.Location("0","0");
+			destLocation = new Portable.Location("0","0");
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -53,7 +74,23 @@ namespace BuenRide.iPhone
 		{
 			base.ViewDidLoad ();
 			
-			// Perform any additional setup after loading the view, typically from a nib.
+			// Create the Facebook LogIn View with the needed Permissions
+			// https://developers.facebook.com/ios/login-ui-control/
+			loginView = new FBLoginView (ExtendedPermissions) {
+				Frame = new System.Drawing.RectangleF (85, FB_Y, 151, 43)
+
+			};
+
+			// Hook up to FetchedUserInfo event, so you know when
+			// you have the user information available
+			loginView.FetchedUserInfo += (sender, e) => {
+				FB_Y = 600;
+				FbUser = e.User;
+				Console.WriteLine("fbuser is "+user.ToString());
+			};
+
+			// Add views to main view
+			View.AddSubview (loginView);
 		}
 
 		public override void ViewWillAppear (bool animated)
@@ -92,32 +129,63 @@ namespace BuenRide.iPhone
 
 		partial void AR_CurrentLoc1_TouchUpInside (UIButton sender)
 		{
-			getLocation();
+			startLocation = getLocation();
 		}
+
+		partial void AR_CurrentLoc2_TouchUpInside (UIButton sender)
+		{
+			destLocation = getLocation();
+		}
+
+		partial void AR_AddButton_TouchUpInside (UIButton sender)
+		{
+			addRide();
+		}
+
+		partial void UIButton135_TouchUpInside (UIButton sender)
+		{
+			logIn ();
+		}	
 
 		partial void SU_SignUpButton_TouchUpInside (UIButton sender)
 		{
 			addUser();
 		}
 
-		partial void LI_SignInButton_TouchUpInside (UIButton sender)
-		{
-			logIn();
+		
+
+		public void addRide() {
+			var request = new RestRequest("api/rides/", Method.POST);
+			request.RequestFormat = DataFormat.Json;
+
+			request.AddParameter ("apikey", user.apikey);
+			request.AddParameter ("observations", this.AR_ObservTextField.Text);
+			request.AddParameter ("startPointLat", startLocation.latitude);
+			request.AddParameter ("startPointLong", startLocation.longitude);
+			request.AddParameter ("destPointLat", destLocation.latitude);
+			request.AddParameter ("destPointLong", destLocation.longitude);
+			// execute the request
+			IRestResponse response = client.Execute(request);
+			var content = response.Content; // raw content as string
+			Console.WriteLine (content);
 		}
+
 
 
 		public void logIn() {
 			var request = new RestRequest("api/usuarios/login/", Method.POST);
 			request.RequestFormat = DataFormat.Json;
+
 			request.AddParameter ("email", this.LI_EmailTextField.Text);
 			request.AddParameter ("password", this.LI_PasswordTextField.Text);
 			// execute the request
 			IRestResponse response = client.Execute(request);
 			var content = response.Content; // raw content as string
 			Console.WriteLine (content);
-			if (!content.Equals("{\"error\":\"user doest exist \"}") && !content.Equals("{\"error\":\"password incorrect \"}")) {
+			if (!content.Equals("{\"error\":\"user doesnt exist\"}") && !content.Equals("{\"error\":\"password incorrect \"}")) {
 				user = JsonConvert.DeserializeObject<Portable.Usuario>(content);
 				Console.WriteLine (user.nombre);
+				Console.WriteLine (user.apikey);
 				UIStoryboard board = UIStoryboard.FromName ("MainStoryboard", null);
 				UINavigationController ctrl = (UINavigationController)board.InstantiateViewController ("MenuNavController");
 				ctrl.ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;
@@ -135,6 +203,7 @@ namespace BuenRide.iPhone
 			request.AddParameter ("username", this.SU_UsernameTextField.Text);
 			request.AddParameter ("password", this.SU_PasswordTextField.Text);
 			request.AddParameter ("phone", this.SU_PhoneTextField.Text);
+
 			// execute the request
 			IRestResponse response = client.Execute(request);
 			var content = response.Content; // raw content as string
