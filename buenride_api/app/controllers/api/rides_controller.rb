@@ -12,18 +12,24 @@ class RidesController < ApplicationController
       @distancias = Array.new
 
       @ride = Ride.order('id')
-      @ride.each do |p|
-        distancia =Geocoder::Calculations.distance_between([params[:latitud],params[:longitud]], [p.destPointLat,p.destPointLong])
-        if distancia <params[:radio].to_f 
-          @result.push(p)
-          @distancias.push(distancia)
+      if params[:radio] != nil
+        @ride.each do |p|
+          distancia =Geocoder::Calculations.distance_between([params[:latitud],params[:longitud]], [p.destPointLat,p.destPointLong])
+          if distancia <params[:radio].to_f 
+            @result.push(p)
+            @distancias.push(distancia)
+          end
         end
+        json_response={
+            result: @result,
+            distancias: @distancias
+          }         
+        respond_with json_response,location: nil
       end
-      json_response={
-          result: @result,
-          distancias: @distancias
-        }         
-      respond_with json_response,location: nil      
+      if params[:radio] == nil
+        respond_with @ride,location: nil
+      end
+      
         #Ride.find_by_destPointLat_and_destPointLong(params[:latitud],params[:longitud])
       
     end
@@ -33,20 +39,24 @@ class RidesController < ApplicationController
       @distancias = Array.new
 
       @ride = Ride.order('id')
-      @ride.each do |p|
-        distancia =Geocoder::Calculations.distance_between([params[:latitud],params[:longitud]], [p.startPointLat,p.startPointLong])
-        if distancia <params[:radio].to_f 
-          @result.push(p)
-          @distancias.push(distancia)
-        end
+      if params[:radio] != nil
+          @ride.each do |p|
+            distancia =Geocoder::Calculations.distance_between([params[:latitud],params[:longitud]], [p.startPointLat,p.startPointLong])
+            if distancia <params[:radio].to_f 
+              @result.push(p)
+              @distancias.push(distancia)
+            end
+          end
+          json_response={
+              result: @result,
+              distancias: @distancias
+            }         
+          respond_with json_response,location: nil      
+            #Ride.find_by_destPointLat_and_destPointLong(params[:latitud],params[:longitud])
+       end
+      if params[:radio] == nil
+        respond_with @ride,location: nil
       end
-      json_response={
-          result: @result,
-          distancias: @distancias
-        }         
-      respond_with json_response,location: nil      
-        #Ride.find_by_destPointLat_and_destPointLong(params[:latitud],params[:longitud])
-      
     end
     
     def find_by_user
