@@ -66,7 +66,7 @@ class UsuariosController < ApplicationController
       
     end
     
-    def create
+    def registrar
       #self.salt = ActiveSupport::SecureRandom.base64(8)
       source = "#{params[:password]}/#{params[:email]}"
       @hashed_password = Digest::SHA2.hexdigest(source)

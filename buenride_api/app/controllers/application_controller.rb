@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
    end
      def check_authentication
      @token = request.headers[:token]
-     @user = Usuario.find_by_apikey(@token) 
+     @user = Usuario.find_by_token(@token) 
       if @user ==nil
        json_response={
           error: 'authentication error'

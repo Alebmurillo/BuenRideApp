@@ -3,11 +3,12 @@ Rails.application.routes.draw do
         resources :rides, format: :json, except: [:destroy,  :update]
         resources :reviews, format: :json, except: [:destroy,  :update]
         resources :lugars, format: :json, except: [:destroy,  :update]
-        resources :usuarios, format: :json, except: [:destroy, :update, :index] do
+        resources :usuarios, format: :json, except: [:destroy, :update,:create, :index] do
           collection do
             post 'login'
             get 'getUsuarios'
             get 'logout'
+            post 'registrar'
           end
         end
   end
