@@ -101,8 +101,8 @@ class RidesController < ApplicationController
       #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
       @ride = Ride.new({:observations => params[:observations], :startPointLat => params[:startPointLat], :startPointLong => params[:startPointLong],:destPointLat => params[:destPointLat], :destPointLong=> params[:destPointLong]})
       
-      #@ride.usuario= @usuario
-      @ride.usuario_id = @usuario
+      @ride.usuario= @usuario
+      #@ride.usuario_id = @usuario
       @ride.save
 
       respond_with @ride, location: nil
