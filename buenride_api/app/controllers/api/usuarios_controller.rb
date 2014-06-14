@@ -52,7 +52,7 @@ class UsuariosController < ApplicationController
              
               @usuario.token=@token
               @usuario.save
-             respond_with @usuario.attributes.except('password','token','created_at','updated_at'), location: nil
+             respond_with @usuario.attributes.except('password','created_at','updated_at'), location: nil
           end
       end
       
