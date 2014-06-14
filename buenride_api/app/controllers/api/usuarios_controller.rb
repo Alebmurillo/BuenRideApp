@@ -52,16 +52,20 @@ class UsuariosController < ApplicationController
              
               @usuario.token=@token
               @usuario.save
-             respond_with @usuario.attributes.except('password'), location: nil
+             respond_with @usuario.attributes.except('password','token','created_at','updated_at'), location: nil
           end
       end
       
     end  
   
     def getUsuarios
-      usuarios= Usuario.order('id')
-      
-      respond_with usuarios , location: nil
+      @usuarios= Usuario.order('id')
+      @result = Array.new 
+      @usuarios.each do |p|
+        @result.push(p.attributes.except('password','token','created_at','updated_at'))
+      end
+      #.attributes.except('password','token','created_at','updated_at')
+      respond_with @result
     end
     def new
       

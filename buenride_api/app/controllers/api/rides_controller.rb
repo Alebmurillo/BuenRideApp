@@ -20,11 +20,11 @@ class RidesController < ApplicationController
             @distancias.push(distancia)
           end
         end
-        json_response={
-            result: @result,
-            distancias: @distancias
-          }         
-        respond_with json_response,location: nil
+#        json_response={
+#            result: @result,
+#            distancias: @distancias
+#          }         
+        respond_with @result , location: nil
       end
       if params[:radio] == nil
         respond_with @ride,location: nil
@@ -39,7 +39,7 @@ class RidesController < ApplicationController
       @distancias = Array.new
 
       @ride = Ride.order('id')
-      if params[:radio] != nil
+      if params[:radio] != '0'
           @ride.each do |p|
             distancia =Geocoder::Calculations.distance_between([params[:latitud],params[:longitud]], [p.startPointLat,p.startPointLong])
             if distancia <params[:radio].to_f 
@@ -47,14 +47,14 @@ class RidesController < ApplicationController
               @distancias.push(distancia)
             end
           end
-          json_response={
-              result: @result,
-              distancias: @distancias
-            }         
-          respond_with json_response,location: nil      
+#          json_response={
+#              result: @result,
+#              distancias: @distancias
+#            }         
+          respond_with @result,location: nil      
             #Ride.find_by_destPointLat_and_destPointLong(params[:latitud],params[:longitud])
        end
-      if params[:radio] == nil
+      if params[:radio] == '0'
         respond_with @ride,location: nil
       end
     end
@@ -69,14 +69,15 @@ class RidesController < ApplicationController
         end
         
       end
-      json_response={
-          result: @result
-        }
-      
+#      json_response={
+#          result: @result
+#        }
+     #@result.push(@ride.usuario_id.attributes.except('password','token','created_at','updated_at'))
+
       #@ride = Ride.where('observations LIKE ?', "%#{params[:search]}%")
       
       #@usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
-      respond_with json_response,location: nil
+      respond_with @result,location: nil
     end  
   
     def index
