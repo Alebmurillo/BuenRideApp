@@ -6,14 +6,73 @@ class RidesController < ApplicationController
     
     skip_before_filter :verify_authenticity_token
         before_action :authenticate	
+        
+    def find_by_destiny
+      @result = Array.new
+      @distancias = Array.new
 
-    def fetch_ride
-      @ride = Ride.find_by_id(params[:id])
+      @ride = Ride.order('id')
+      @ride.each do |p|
+        distancia =Geocoder::Calculations.distance_between([params[:latitud],params[:longitud]], [p.destPointLat,p.destPointLong])
+        if distancia <params[:radio].to_f 
+          @result.push(p)
+          @distancias.push(distancia)
+        end
+      end
+      json_response={
+          result: @result,
+          distancias: @distancias
+        }         
+      respond_with json_response,location: nil      
+        #Ride.find_by_destPointLat_and_destPointLong(params[:latitud],params[:longitud])
+      
+    end
+    
+    def find_by_start
+      @result = Array.new
+      @distancias = Array.new
+
+      @ride = Ride.order('id')
+      @ride.each do |p|
+        distancia =Geocoder::Calculations.distance_between([params[:latitud],params[:longitud]], [p.startPointLat,p.startPointLong])
+        if distancia <params[:radio].to_f 
+          @result.push(p)
+          @distancias.push(distancia)
+        end
+      end
+      json_response={
+          result: @result,
+          distancias: @distancias
+        }         
+      respond_with json_response,location: nil      
+        #Ride.find_by_destPointLat_and_destPointLong(params[:latitud],params[:longitud])
+      
+    end
+    
+    def find_by_user
+      @result = Array.new
+      @usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
+      @usuario.each do |p|
+        @ride = Ride.find(p.id)
+        if @ride != nil
+          @result.push(@ride)
+        end
+        
+      end
+      json_response={
+          result: @result
+        }
+      
+      #@ride = Ride.where('observations LIKE ?', "%#{params[:search]}%")
+      
+      #@usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
+      respond_with json_response,location: nil
     end  
   
     def index
-      rides= Ride.order('id')
-      
+      #@hola =  Geocoder.coordinates "Ukraine"
+      #respond_with @hola
+      rides = Ride.order('id')
       respond_with rides
     end
     def new
@@ -26,7 +85,7 @@ class RidesController < ApplicationController
    # :destPointLat
    #    :destPointLong
    #    
-      @usuario=Usuario.find_by_token(params[:token])
+      @usuario=Usuario.find_by_token(request.headers[:token])
       if @usuario!=nil
       #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
       @ride = Ride.new({:observations => params[:observations], :startPointLat => params[:startPointLat], :startPointLong => params[:startPointLong],:destPointLat => params[:destPointLat], :destPointLong=> params[:destPointLong]})
