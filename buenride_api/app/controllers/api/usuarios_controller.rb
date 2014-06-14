@@ -5,7 +5,7 @@ class UsuariosController < ApplicationController
     #before_filter :restrict_access 
     skip_before_filter :verify_authenticity_token
     before_action :authenticate	
-    before_action :check_authentication,  except: [ :create, :login ]	
+    before_action :check_authentication,  except: [ :registrar, :login ]	
     def logout
       @token = request.headers[:token]
       @user = Usuario.find_by_token(@token) 
@@ -49,9 +49,10 @@ class UsuariosController < ApplicationController
     #         token: @usuario.token
     #       }
              @token =SecureRandom.hex.to_s
+             
               @usuario.token=@token
               @usuario.save
-             respond_with @usuario, location: nil
+             respond_with @usuario.attributes.except('password'), location: nil
           end
       end
       
