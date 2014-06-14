@@ -8,9 +8,9 @@ class UsuariosController < ApplicationController
     before_action :check_authentication,  except: [ :create, :login ]	
     def logout
       @token = request.headers[:token]
-      @user = Usuario.find_by_apikey(@token) 
+      @user = Usuario.find_by_token(@token) 
       if @user !=nil
-        @user.apikey=nil
+        @user.token=nil
         @user.save
         json_response={
             message: 'logout success'
@@ -46,10 +46,10 @@ class UsuariosController < ApplicationController
           end
           if @usuario!= nil
     #      json_response={
-    #         apikey: @usuario.apikey
+    #         token: @usuario.token
     #       }
-             @apikey =SecureRandom.hex.to_s
-              @usuario.apikey=@apikey
+             @token =SecureRandom.hex.to_s
+              @usuario.token=@token
               @usuario.save
              respond_with @usuario, location: nil
           end
@@ -71,7 +71,7 @@ class UsuariosController < ApplicationController
       source = "#{params[:password]}/#{params[:email]}"
       @hashed_password = Digest::SHA2.hexdigest(source)
       #@hashed_password = BCrypt::Password.create(params[:password])
-      #@apikey =SecureRandom.hex.to_s
+      #@token =SecureRandom.hex.to_s
       #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
       @usuario = Usuario.new({:username => params[:username], :password => @hashed_password,:nombre => params[:name], :email=> params[:email], :telefono => params[:phone]})
       @usuario.save
@@ -106,7 +106,7 @@ class UsuariosController < ApplicationController
     
     private
     def usuario_params
-      params.require(:usuario).permit(:username , :password, :apikey,:nombre, :email, :telefono)
+      params.require(:usuario).permit(:username , :password, :token,:nombre, :email, :telefono)
       #params.require(:persona).permit(:nombre, :email, :telefono, :home_latitud, :home_longitud)
 
     end

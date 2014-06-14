@@ -31,12 +31,12 @@ ActiveRecord::Schema.define(version: 20140611141731) do
   end
 
   create_table "rides", force: true do |t|
-    t.integer  "usuario_id"
     t.string   "observations"
     t.string   "startPointLat"
     t.string   "startPointLong"
     t.string   "destPointLat"
     t.string   "destPointLong"
+    t.integer  "usuario_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20140611141731) do
   create_table "usuarios", force: true do |t|
     t.string   "username"
     t.string   "password"
-    t.string   "apikey"
+    t.string   "token"
     t.string   "nombre"
     t.string   "email"
     t.string   "telefono"

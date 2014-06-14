@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
       
     end
     def create
-      @usuario=Usuario.find_by_apikey(params[:apikey])
+      @usuario=Usuario.find_by_token(params[:token])
       if @usuario!=nil
           @review = Review.new({:comentario => params[:comentario], :calificacion=> params[:calificacion]})
           @review.submitted_by=@usuario

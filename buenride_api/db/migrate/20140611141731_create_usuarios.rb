@@ -3,7 +3,7 @@ class CreateUsuarios < ActiveRecord::Migration
     create_table :usuarios do |t|
       t.string :username
       t.string :password
-      t.string :apikey
+      t.string :token
       t.string :nombre
       t.string :email
       t.string :telefono
