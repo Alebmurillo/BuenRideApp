@@ -60,27 +60,25 @@ class RidesController < ApplicationController
 #    end
     
     def find_by_user
-      @result = Array.new
-      @usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
-      @usuario.each do |p|
-        @ride= Ride.order('id')
-        
-        @ride.each do |q|
-          if q.usuario_id == p.id
-            @result.push(p)
-          end
-        end
-        
+      #@result = Array.new
+      @usuarios = Usuario.where('username LIKE ?', "%#{params[:search]}%")
+      @result = Array.new 
+      @usuarios.each do |p|
+        @result.push(p.attributes.except('password','token','created_at','updated_at'))
       end
-      
-    
+#      @usuario.each do |p|
+#        @ride= Ride.order('id')#        
+#        @ride.each do |q|
+#          if q.usuario_id == p.id
+#            @result.push(p)
+#          end
+#        end        
+#      end    
 #      json_response={
 #          result: @result
 #        }
      #@result.push(@ride.usuario_id.attributes.except('password','token','created_at','updated_at'))
-
-      #@ride = Ride.where('observations LIKE ?', "%#{params[:search]}%")
-      
+      #@ride = Ride.where('observations LIKE ?', "%#{params[:search]}%")      
       #@usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
       respond_with @result,location: nil
     end  
