@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
     PER_PAGE_RECORDS=9
     
     skip_before_filter :verify_authenticity_token
-
+    before_action :authenticate	
     def index
       reviews= Review.order('id')      
       
@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
       
     end
     def create
-      @usuario=Usuario.find_by_token(params[:token])
+      @usuario=Usuario.find_by_token(request.headers[:token])
       if @usuario!=nil
           @review = Review.new({:comentario => params[:comentario], :calificacion=> params[:calificacion]})
           @review.submitted_by=@usuario

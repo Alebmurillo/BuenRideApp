@@ -3,7 +3,7 @@ Rails.application.routes.draw do
         resources :rides, format: :json, except: [:destroy,  :update] do
           collection do
             post 'find_by_user'
-            post 'find_by_destiny'
+            post 'find_by_route'
             post 'find_by_start'
           end
         end
