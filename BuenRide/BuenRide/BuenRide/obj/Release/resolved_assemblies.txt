@@ -1,0 +1,17 @@
+C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\bin\Release\BuenRide.dll
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\BuenRide.Portable.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\restsharp-104.1.0\lib\android\RestSharp.MonoDroid.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v4.4\Mono.Android.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\mscorlib.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Xml.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Mono.Security.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Core.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Runtime.Serialization.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Xml.Linq.dll
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Json.dll

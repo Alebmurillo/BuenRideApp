@@ -8,8 +8,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>BuenRide.Portable</RootNamespace>
     <AssemblyName>BuenRide.Portable</AssemblyName>
-    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile1</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,10 +32,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lugar.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Reviews.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Ride.cs" />
+    <Compile Include="BackendConnection.cs" />
+    <Compile Include="RideUser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

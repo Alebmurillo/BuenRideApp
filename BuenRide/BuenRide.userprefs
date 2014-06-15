@@ -1,11 +1,9 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BuenRide.iPhone\MainViewController.cs">
     <Files>
-      <File FileName="BuenRide.iPhone/MainViewController.cs" Line="1" Column="1" />
-      <File FileName="BuenRide.iPhone/Main.cs" Line="1" Column="1" />
-      <File FileName="BuenRide/FBWebViewAuthActivity.cs" Line="1" Column="1" />
-      <File FileName="BuenRide/MainActivity.cs" Line="22" Column="48" />
+      <File FileName="BuenRide.iPhone\MainViewController.cs" Line="1" Column="1" />
+      <File FileName="BuenRide.iPhone\Main.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

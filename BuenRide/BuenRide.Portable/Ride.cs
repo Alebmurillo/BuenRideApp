@@ -12,11 +12,11 @@ namespace BuenRide.Portable
 			get;
 			set;
 		}
-		public string endPointLat {
+		public string destPointLat {
 			get;
 			set;
 		}
-		public string endPointLong {
+		public string destPointLong {
 			get;
 			set;
 		}
@@ -28,8 +28,8 @@ namespace BuenRide.Portable
 		{
 			startPointLat = StartLat;
 			startPointLong = StartLong;
-			endPointLat = EndLat;
-			endPointLong = EndLong;
+			destPointLat = EndLat;
+			destPointLong = EndLong;
 			observations = Observations;
 		}
 

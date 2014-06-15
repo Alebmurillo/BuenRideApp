@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="BuenRide.BuenRide">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
+  <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <!-- We need to be able to download map tiles and access Google Play Services-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- Allow the application to access Google web-based services. -->
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+  <!-- Google Maps for Android v2 will cache map tiles on external storage -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- Google Maps for Android v2 needs this permission so that it may check the connection state as it must download data -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!-- Permission to receive remote notifications from Google Play Services -->
+  <!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
+  <uses-permission android:name="BuenRide.permission.MAPS_RECEIVE" />
+  <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <application android:label="BuenRide" android:name="mono.android.app.Application">
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBx0ycIoEXnIKWZ1LPkLW0QXi4S2EZaUIE" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:label="BuenRide" android:name="buenride.and.MainActivity" />
+    <activity android:label="FBWebViewAuthActivity" android:name="buenride.and.FBWebViewAuthActivity" />
+    <activity android:label="PrincipalMenu" android:name="buenride.and.PrincipalMenu" />
+    <activity android:label="ShareActivity" android:name="buenride.and.ShareActivity" />
+    <activity android:label="ShowMap" android:name="buenride.and.ShowMap" />
+    <activity android:label="SearchRide" android:name="buenride.and.SearchRide" />
+    <activity android:label="CalculateCost" android:name="buenride.and.CalculateCost" />
+    <activity android:label="Profile" android:name="buenride.and.Profile" />
+    <activity android:label="SignUp" android:name="buenride.and.SignUp" />
+    <activity android:label="AddRide" android:name="buenride.and.AddRide" />
+    <activity android:label="WaitForGPS" android:name="buenride.and.WaitForGPS" />
+    <activity android:label="Web Authenticator" android:name="xamarin.auth.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="xamarin.auth.WebAuthenticatorActivity" />
+    <activity android:label="Share" android:name="xamarin.social.ShareActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="BuenRide.BuenRide.mono.MonoRuntimeProvider.__mono_init__" />
+    <activity android:label="BuenRide" android:name="buenride.buenride.TrialSplashScreen" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>

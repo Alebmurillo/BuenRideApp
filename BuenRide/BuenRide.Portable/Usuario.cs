@@ -16,19 +16,7 @@ namespace BuenRide.Portable
 			get;
 			set;
 		}
-		public string apikey {
-			get;
-			set;
-		}
-		public string nombre {
-			get;
-			set;
-		}
-		public string email {
-			get;
-			set;
-		}
-		public string telefono {
+		public string token {
 			get;
 			set;
 		}
@@ -41,15 +29,12 @@ namespace BuenRide.Portable
 			set;
 		}
 
-		public Usuario (int Id, string Username, string Password, string Apikey, string Nombre, string Email, string Telefono, DateTime CreatedAt, DateTime UpdatedAt)
+		public Usuario (int Id, string Username, string Password, string token, DateTime CreatedAt, DateTime UpdatedAt)
 		{
 			id = Id;
 			username = Username;
 			password = Password;
-			apikey = Apikey;
-			nombre = Nombre;
-			email = Email;
-			telefono = Telefono;
+			token = token;
 			createdAt = CreatedAt;
 			updatedAt = UpdatedAt;
 		}

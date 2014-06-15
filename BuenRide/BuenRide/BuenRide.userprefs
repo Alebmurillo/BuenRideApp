@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BuenRide\SearchRideMenu.cs">
+    <Files>
+      <File FileName="BuenRide\SearchRideMenu.cs" Line="103" Column="48" />
+      <File FileName="BuenRide\MainActivity.cs" Line="75" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="BuenRide.And" expanded="True">
+            <Node name="ComponentReferenceFolder" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
+            <Node name="SearchRideMenu.cs" selected="True" />
+          </Node>
+          <Node name="BuenRide.Portable" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\bolanosm\Documents\Projects\BuenRide\Components\facebook-sdk-6.2.1\samples\FacebookSample.Android\FacebookSample.Android\MainActivity.cs" line="80" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BuenRide.And AndroidDeviceId-Debug="4df75839326630c9" MonoForAntroid.PreferredDevice="4.65&quot; 720p (Galaxy Nexus)" />
+</Properties>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide.And", "BuenRide\BuenRide.And.csproj", "{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenRide.Portable", "..\..\..\Desktop\BuenRide.Portable\BuenRide.Portable.csproj", "{743B0240-60AD-42FA-B0D1-C3454F73D644}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284532B7-09A2-45EB-8BAC-B1FEB2A94AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743B0240-60AD-42FA-B0D1-C3454F73D644}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = BuenRide\BuenRide.And.csproj
+	EndGlobalSection
+EndGlobal

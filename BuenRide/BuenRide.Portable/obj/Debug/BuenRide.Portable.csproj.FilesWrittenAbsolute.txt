@@ -1,0 +1,5 @@
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/BuenRide.Portable/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/BuenRide.Portable/bin/Debug/BuenRide.Portable.dll.mdb
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/BuenRide.Portable/bin/Debug/BuenRide.Portable.dll
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/BuenRide.Portable/obj/Debug/BuenRide.Portable.dll
+/Users/PeggyTaylor/Desktop/BuenRideApp/BuenRide/BuenRide.Portable/obj/Debug/BuenRide.Portable.dll.mdb
