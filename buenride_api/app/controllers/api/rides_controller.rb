@@ -63,12 +63,18 @@ class RidesController < ApplicationController
       @result = Array.new
       @usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
       @usuario.each do |p|
-        @ride = Ride.find_by_usuario_id(p.id)
-        if @ride != nil
-          @result.push(@ride)
+        @ride= Ride.order('id')
+        @result = Array.new
+        
+        @ride.each do |q|
+          if q.usuario_id == p.id
+            @result.push(p)
+          end
         end
         
       end
+      
+    
 #      json_response={
 #          result: @result
 #        }
