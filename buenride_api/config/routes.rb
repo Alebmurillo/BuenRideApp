@@ -7,10 +7,18 @@ Rails.application.routes.draw do
             post 'find_by_start'
           end
         end
-        resources :reviews, format: :json, except: [:destroy,  :update]
+        resources :reviews, format: :json, except: [:destroy,  :update] do
+          collection do    
+          post 'setReview'
+          post 'myReviews'
+          post 'getReviews_by_id'
+          end
+        end
         resources :lugars, format: :json, except: [:destroy,  :update]
         resources :usuarios, format: :json, except: [:destroy, :update,:create, :index] do
           collection do
+            post 'getUsuario_by_id'
+            post 'myUsuario'
             post 'login'
             get 'getUsuarios'
             get 'logout'

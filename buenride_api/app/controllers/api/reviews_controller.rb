@@ -6,15 +6,30 @@ class ReviewsController < ApplicationController
     
     skip_before_filter :verify_authenticity_token
     before_action :authenticate	
-    def index
-      reviews= Review.order('id')      
-      
-      respond_with reviews     
+    def getReviews_by_id
+      @user = Usuario.find(params[:id])
+      @result = Array.new
+      @reviews= Review.order('id') 
+      @reviews.each do |p|
+        if p.usuario_id == @user.id
+          @result.push(p)
+        end
+      end
+      respond_with @result   , location: nil  
     end
-    def new
-      
+    def myReviews
+      @token = request.headers[:token]
+      @user = Usuario.find_by_token(@token) 
+      @result = Array.new
+      @reviews= Review.order('id') 
+      @reviews.each do |p|
+        if p.usuario_id == @user.id
+          @result.push(p)
+        end
+      end
+      respond_with @result   , location: nil   
     end
-    def create
+    def setReview
       @usuario=Usuario.find_by_token(request.headers[:token])
       if @usuario!=nil
           @review = Review.new({:comentario => params[:comentario], :calificacion=> params[:calificacion]})

@@ -63,7 +63,7 @@ class RidesController < ApplicationController
       @result = Array.new
       @usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
       @usuario.each do |p|
-        @ride = Ride.find(p.id)
+        @ride = Ride.find_by_usuario_id(p.id)
         if @ride != nil
           @result.push(@ride)
         end

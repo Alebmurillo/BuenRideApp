@@ -56,7 +56,17 @@ class UsuariosController < ApplicationController
           end
       end
       
-    end  
+    end
+    def getUsuario_by_id
+      @usuarios= Usuario.find(params[:id])
+      
+      respond_with @usuarios.attributes.except('password','token','created_at','updated_at'), location: nil
+    end
+    def myUsuario
+      @token = request.headers[:token]
+      @user = Usuario.find_by_token(@token) 
+      respond_with @user, location: nil
+    end
   
     def getUsuarios
       @usuarios= Usuario.order('id')
@@ -65,7 +75,7 @@ class UsuariosController < ApplicationController
         @result.push(p.attributes.except('password','token','created_at','updated_at'))
       end
       #.attributes.except('password','token','created_at','updated_at')
-      respond_with @result
+      respond_with @result, location: nil
     end
     def new
       
