@@ -64,7 +64,6 @@ class RidesController < ApplicationController
       @usuario = Usuario.where('username LIKE ?', "%#{params[:search]}%")
       @usuario.each do |p|
         @ride= Ride.order('id')
-        @result = Array.new
         
         @ride.each do |q|
           if q.usuario_id == p.id
