@@ -5,6 +5,7 @@ Rails.application.routes.draw do
             post 'find_by_user'
             post 'find_by_route'
             post 'find_by_start'
+            post 'addRide'
           end
         end
         resources :reviews, format: :json, except: [:destroy,  :update] do

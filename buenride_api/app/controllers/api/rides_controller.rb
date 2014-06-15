@@ -95,7 +95,7 @@ class RidesController < ApplicationController
     def new
       
     end
-    def create
+    def addRide
        #:observations
  #:startPointLat
    #  :startPointLong
@@ -132,13 +132,6 @@ class RidesController < ApplicationController
 #    end
     def show
       respond_with Ride.find(params[:id])
-    end
-    def update
-      respond_with Ride.update(params[:id], ride_params)
-
-    end
-    def destroy
-      respond_with Ride.destroy(params[:id])
     end
     
    
