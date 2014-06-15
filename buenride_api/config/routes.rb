@@ -19,7 +19,7 @@ Rails.application.routes.draw do
         resources :usuarios, format: :json, except: [:destroy, :update,:create, :index] do
           collection do
             post 'getUsuario_by_id'
-            post 'myUsuario'
+            get 'myUsuario'
             post 'login'
             get 'getUsuarios'
             get 'logout'
