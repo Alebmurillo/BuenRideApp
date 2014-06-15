@@ -1,11 +1,11 @@
 module Api
-class UsuariosController < ApplicationController
-  respond_to :json
-    PER_PAGE_RECORDS=9
-    #before_filter :restrict_access 
+  class UsuariosController < ApplicationController
+    respond_to :json
+    
     skip_before_filter :verify_authenticity_token
     before_action :authenticate	
     before_action :check_authentication,  except: [ :registrar, :login ]	
+    #elimina el token de la BD
     def logout
       @token = request.headers[:token]
       @user = Usuario.find_by_token(@token) 
@@ -13,17 +13,18 @@ class UsuariosController < ApplicationController
         @user.token=nil
         @user.save
         json_response={
-            message: 'logout success'
-          }
-           respond_with json_response, location: nil
+          message: 'logout success'
+        }
+        respond_with json_response, location: nil
       end
-       if @user ==nil
+      if @user ==nil
         json_response={
-              message: 'logout fail'
+          message: 'logout fail'
         }
         respond_with json_response, location: nil
       end
     end
+    #crea un toquen para el usuario y asi pueda utilizar el api
     def login
       
       source = "#{params[:password]}/#{params[:email]}"
@@ -33,98 +34,65 @@ class UsuariosController < ApplicationController
         json_response={
           error: 'user or password incorrect'
         }
-         respond_with json_response, location: nil
+        respond_with json_response, location: nil
       end
       if @user != nil
-          @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password) 
-          if @usuario== nil
-            json_response={
-              error: 'user or password incorrect'
+        @usuario = Usuario.find_by_email_and_password(params[:email],@hashed_password) 
+        if @usuario== nil
+          json_response={
+            error: 'user or password incorrect'
 
-            }
-             respond_with json_response, location: nil
-          end
-          if @usuario!= nil
-    #      json_response={
-    #         token: @usuario.token
-    #       }
-             @token =SecureRandom.hex.to_s
+          }
+          respond_with json_response, location: nil
+        end
+        if @usuario!= nil
+          
+          @token =SecureRandom.hex.to_s
              
-              @usuario.token=@token
-              @usuario.save
-             respond_with @usuario.attributes.except('password','created_at','updated_at'), location: nil
-          end
+          @usuario.token=@token
+          @usuario.save
+          respond_with @usuario.attributes.except('password','created_at','updated_at'), location: nil
+        end
       end
       
     end
+    #obtiene el usuario por id
     def getUsuario_by_id
-      @usuarios= Usuario.find(params[:id])
-      
+      @usuarios= Usuario.find(params[:id])      
       respond_with @usuarios.attributes.except('password','token','created_at','updated_at'), location: nil
     end
+    #obtiene el usuario por token
     def myUsuario
       @token = request.headers[:token]
       @user = Usuario.find_by_token(@token) 
       respond_with @user, location: nil
     end
-  
+  #obtiene todos los usuarios
     def getUsuarios
       @usuarios= Usuario.order('id')
       @result = Array.new 
       @usuarios.each do |p|
         @result.push(p.attributes.except('password','token','created_at','updated_at'))
       end
-      #.attributes.except('password','token','created_at','updated_at')
       respond_with @result, location: nil
     end
-    def new
-      
-    end
     
+    #crea un usuario
     def registrar
-      #self.salt = ActiveSupport::SecureRandom.base64(8)
       source = "#{params[:password]}/#{params[:email]}"
       @hashed_password = Digest::SHA2.hexdigest(source)
-      #@hashed_password = BCrypt::Password.create(params[:password])
-      #@token =SecureRandom.hex.to_s
-      #@persona = Persona.new({:nombre => params[:nombre], :email=> params[:email], :telefono=> params[:telefono],:home_longitud => params[:home_longitud]})
       @usuario = Usuario.new({:username => params[:username], :password => @hashed_password,:nombre => params[:name], :email=> params[:email], :telefono => params[:phone]})
       @usuario.save
       respond_with @usuario, location: nil
     end
-#    def createReview
-#
-#      @usuario = fetch_user()
-#      @review = @usuario.reviews.create({:comentario => params[:comentario], :calificacion=> params[:calificacion], :submitted_by=> params[:submitted_by]})
-#
-#      @usuario.save
-#      respond_with @usuario, location: nil
-#    end
-    def show
-      respond_with Usuario.find(params[:id])
-    end
-    def update
-      respond_with Usuario.update(params[:id], usuario_params)
-
-    end
-    def destroy
-      respond_with Usuario.destroy(params[:id])
-    end
-#    protected	
-#      def authenticate	
-#        authenticate_or_request_with_http_token do |token, options|	
-#        User.find_by(auth_token: token)	
-#    end	
-#     end	
-
+   
     
     
     private
     def usuario_params
       params.require(:usuario).permit(:username , :password, :token,:nombre, :email, :telefono)
-      #params.require(:persona).permit(:nombre, :email, :telefono, :home_latitud, :home_longitud)
 
     end
     
-end
+  end
 end
