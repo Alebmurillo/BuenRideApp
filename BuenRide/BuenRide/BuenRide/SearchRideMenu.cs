@@ -55,7 +55,7 @@ namespace BuenRide.And
 			};
 			ActionBar.AddTab(tab);
 			tab = ActionBar.NewTab();
-			tab.SetText("By user");
+			tab.SetText("Other");
 			tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {     
 				var fragment = this.FragmentManager.FindFragmentById(Resource.Id.fragmentContainer);
 				if (fragment != null)
@@ -74,6 +74,9 @@ namespace BuenRide.And
 			int index = id_tags.IndexOf (marker.Title);
 			int id = id_rides [index];
 			Console.WriteLine (id);
+			activity2.PutExtra ("id", ""+id);
+			activity2.PutExtra ("lat", "0");
+			activity2.PutExtra ("long", "0");
 			StartActivity (activity2);
 		}
 		public void SearchOnMap(int miles, bool bydestination, string latS, string longS, string latE, string longE){
@@ -86,7 +89,7 @@ namespace BuenRide.And
 			map.MoveCamera(CameraUpdateFactory.NewLatLngZoom (new LatLng (Convert.ToDouble (latS), Convert.ToDouble (longS)), 9));
 			if (bydestination) {
 				color = BitmapDescriptorFactory.HueOrange;
-				map.MoveCamera(CameraUpdateFactory.NewLatLngZoom (new LatLng (Convert.ToDouble (latE), Convert.ToDouble (longE)), 9));
+				map.MoveCamera(CameraUpdateFactory.NewLatLngZoom (new LatLng (Convert.ToDouble (latE), Convert.ToDouble (longE)),9));
 			}
 			Console.WriteLine ("show by miles");
 			//Consulta
@@ -126,8 +129,8 @@ namespace BuenRide.And
 				id_tags.Add ("Ride "+ i);
 				id_rides.Add (Convert.ToInt32(rides [i].usuario_id));
 				map.AddMarker (markerOpt1);
-
 				map.SetOnInfoWindowClickListener(this);
+
 				}}
 			catch{
 				Console.WriteLine ("ERROR DE CONEXION");
@@ -210,31 +213,33 @@ namespace BuenRide.And
 				}
 		}
 
-
 		class TabByUserFragment: Android.App.Fragment
 		{  
 			public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 			{
 				base.OnCreateView (inflater, container, savedInstanceState);
-				var view = inflater.Inflate (Resource.Layout.activity_list_rides, container, false);
+				var view = inflater.Inflate (Resource.Layout.layout_search_other, container, false);
+
+				var btnShowAll = view.FindViewById<View> (Resource.Id.buttonAll);
+				var btnSearchByUser = view.FindViewById<View> (Resource.Id.buttonSearch);
+
+				btnShowAll.Click += HandleShowAll;
+				btnSearchByUser.Click += HandleSearchByUser;
 				return view;
+			}
+			void HandleShowAll(object sender, EventArgs e)
+			{
+				var myActivity = (SearchRideMenu) this.Activity;
+				myActivity.SearchOnMap(0, true, "0","0","0","0");
+			}
+
+			void HandleSearchByUser(object sender, EventArgs e)
+			{	
+				var activity = new Intent (this.Activity, typeof(searchByUserActivity));
+				StartActivity (activity);
 			}
 
 		}
-			class ListUserFragment: Android.App.ListFragment
-			{  
-				public override void OnActivityCreated(Bundle savedInstanceState)
-				{
-					base.OnActivityCreated(savedInstanceState);
-
-					string[] values = new[] { "Android", "iPhone", "WindowsMobile",
-						"Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-						"Linux", "OS/2" };
-					this.ListAdapter = new ArrayAdapter<string>(Activity, Android.Resource.Layout.SimpleExpandableListItem1, values);
-				}
-			}
-
-		
 
 
 		class TabByDestFragment: Android.App.Fragment

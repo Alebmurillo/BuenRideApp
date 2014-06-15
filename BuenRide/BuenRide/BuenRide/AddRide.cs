@@ -88,7 +88,7 @@ namespace BuenRide.And
 		{
 			EventWaitHandle Wait = new AutoResetEvent(false);
 			var client = new RestClient (backend.url);
-			var request = new RestRequest ("api/rides/", RestSharp.Method.POST);
+			var request = new RestRequest ("api/rides/addRide/", RestSharp.Method.POST);
 			request.AddHeader ("apikey", backend.apikey);
 			request.AddHeader("token", backend.token);
 			request.AddParameter("observations", observations.Text);

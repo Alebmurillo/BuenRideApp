@@ -28,15 +28,24 @@ namespace BuenRide.Portable
 			get;
 			set;
 		}
-
-		public Usuario (int Id, string Username, string Password, string token, DateTime CreatedAt, DateTime UpdatedAt)
+		public string email {
+			get;
+			set;
+		}
+		public string telefono {
+			get;
+			set;
+		}
+		public Usuario (int Id, string Username, string Password, string token, DateTime CreatedAt, DateTime UpdatedAt, string email, string telefono)
 		{
 			id = Id;
+			telefono = telefono;
 			username = Username;
 			password = Password;
 			token = token;
 			createdAt = CreatedAt;
 			updatedAt = UpdatedAt;
+			email = email;
 		}
 
 		public Usuario ()

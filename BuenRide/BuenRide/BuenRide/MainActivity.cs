@@ -190,23 +190,3 @@ namespace BuenRide.And
 	}
 }
 
-
-/*
- * 
- * if (isLoggedIn) {
-				
-				fb.GetTaskAsync ("me").ContinueWith (t => {
-					if (!t.IsFaulted) {
-
-						var result = (IDictionary<string, object>)t.Result;
-						
-						string data = "Name: " + (string)result["name"] + "\n" + 
-							"First Name: " + (string)result["first_name"] + "\n" +
-								"Last Name: " + (string)result["last_name"] + "\n" +
-								"Profile Url: " + (string)result["link"];
-						RunOnUiThread ( () => {
-							Alert ("Your Info", data, false, (res) => {} );
-						});
-					}
-				});		Alert ("Not Logged In", "Please Log In First", false, (res) => { });
-			}*/

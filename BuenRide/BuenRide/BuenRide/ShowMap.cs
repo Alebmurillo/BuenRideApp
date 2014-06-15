@@ -29,8 +29,9 @@ namespace BuenRide.And
 			GoogleMap map = mapFrag.Map;
 			if (map != null) {
 				MarkerOptions markerOpt1 = new MarkerOptions();
-				markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
+				markerOpt1.SetPosition(new LatLng(9.98366186153203,-84.0450796046493));
 				markerOpt1.SetTitle("My Ride");
+				map.MoveCamera(CameraUpdateFactory.NewLatLngZoom (new LatLng (9.98366186153203, -84.0450796046493), 9));
 				markerOpt1.Draggable (true);
 				map.AddMarker(markerOpt1);	
 				map.SetOnMarkerDragListener(this);

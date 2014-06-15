@@ -12,24 +12,23 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="4"
-        android:text="Rides"
+        android:text="Search by user name:"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white"
         android:textColorHighlight="@android:color/black"
         android:textStyle="bold" />
-    <EditText
-        android:layout_width="match_parent"
+    <AutoCompleteTextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
+        android:id="@+id/AutoCompleteInput" />
     <Button
         android:text="Search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonSeach" />
-    <ListView
-        android:id="@+id/listRides"
+        android:id="@+id/buttonSearchUser" />
+    <FrameLayout
+        android:id="@+id/ridesFC"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="5dp"
-        tools:listitem="@layout/item_ride" />
+        android:layout_height="match_parent" />
 </LinearLayout>

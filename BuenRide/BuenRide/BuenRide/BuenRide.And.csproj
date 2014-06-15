@@ -78,8 +78,8 @@
     <Compile Include="SignUp.cs" />
     <Compile Include="AddRide.cs" />
     <Compile Include="WaitForGPS.cs" />
-    <Compile Include="SearchRideByMap.cs" />
     <Compile Include="SearchRideMenu.cs" />
+    <Compile Include="searchByUserActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -120,6 +120,8 @@
     <AndroidResource Include="Resources\layout\layout_SearchRide.axml" />
     <AndroidResource Include="Resources\drawable\car.png" />
     <AndroidResource Include="Resources\layout\LayoutSearchbyMap.axml" />
+    <AndroidResource Include="Resources\layout\dialogAddReview.axml" />
+    <AndroidResource Include="Resources\layout\layout_search_other.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

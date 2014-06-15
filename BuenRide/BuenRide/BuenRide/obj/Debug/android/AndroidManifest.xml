@@ -32,8 +32,8 @@
     <activity android:icon="@drawable/car" android:label="SignUp" android:name="buenride.and.SignUp" />
     <activity android:icon="@drawable/car" android:label="AddRide" android:name="buenride.and.AddRide" />
     <activity android:icon="@drawable/car" android:label="WaitForGPS" android:name="buenride.and.WaitForGPS" />
-    <activity android:label="SearchRideByMap" android:name="buenride.SearchRideByMap" />
     <activity android:icon="@drawable/car" android:label="SearchRideMenu" android:name="buenride.and.SearchRideMenu" />
+    <activity android:icon="@drawable/car" android:label="Search by User" android:name="buenride.and.searchByUserActivity" />
     <activity android:label="Web Authenticator" android:name="xamarin.auth.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="xamarin.auth.WebAuthenticatorActivity" />
     <activity android:label="Share" android:name="xamarin.social.ShareActivity" />

@@ -16,10 +16,6 @@ namespace BuenRide.Portable
 			get;
 			set;
 		}
-		public string submittedBy {
-			get;
-			set;
-		}
 		public DateTime createdAt {
 			get;
 			set;
@@ -28,12 +24,15 @@ namespace BuenRide.Portable
 			get;
 			set;
 		}
-
-		public Reviews (int Id, string Comentario, string Calificacion, string SubmittedBy, DateTime CreatedAt, DateTime UpdatedAt)
+		public Usuario Usuario {
+			get;
+			set;
+		}
+		public Reviews (int Id, string Comentario, string Calificacion, DateTime CreatedAt, DateTime UpdatedAt, Usuario usuario)
 		{
 			id = Id;
+			Usuario = usuario;
 			comentario = Comentario;
-			submittedBy = SubmittedBy;
 			calificacion = Calificacion;
 			createdAt = CreatedAt;
 			updatedAt = UpdatedAt;

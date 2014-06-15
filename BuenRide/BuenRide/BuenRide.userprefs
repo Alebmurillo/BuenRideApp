@@ -1,24 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BuenRide\SearchRideMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BuenRide\searchByUserActivity.cs">
     <Files>
-      <File FileName="BuenRide\SearchRideMenu.cs" Line="103" Column="48" />
-      <File FileName="BuenRide\MainActivity.cs" Line="75" Column="1" />
+      <File FileName="BuenRide\searchByUserActivity.cs" Line="25" Column="56" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="BuenRide.And" expanded="True">
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="Resources" expanded="True">
-              <Node name="layout" expanded="True" />
-            </Node>
-            <Node name="SearchRideMenu.cs" selected="True" />
-          </Node>
-          <Node name="BuenRide.Portable" expanded="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

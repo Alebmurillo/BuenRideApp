@@ -13,25 +13,23 @@ using Android.Gms.Maps.Model;
 //using BuenRide.Portable;
 using Newtonsoft.Json;
 using RestSharp;
+using BuenRide.Portable;
 
 namespace BuenRide.And
 {
 	[Activity (Label = "SearchRide")]			
 	public class SearchRide : ListActivity
 	{
-		List<string> items = new List<string>();
+		List<string> reviewsToShow = new List<string>();
 		protected override void OnCreate(Bundle bundle)
 		{
-			/*		base.OnCreate(bundle);
+			/*	base.OnCreate(bundle);
 			string content = Intent.GetStringExtra ("contentJson") ?? "";
-			List<Portable.Ride> rides = JsonConvert.DeserializeObject<List<Portable.Ride>>(content);
-			Console.WriteLine (content);
-			Console.WriteLine (rides.Count);
-			for (int i = 0; i < rides.Count; i++) {
-				string ridestr = "Ride" + i + ": \n" + " Lat i:" + rides [i].startPointLat + " Lon i:" + rides [i].startPointLong + "\n Lat f:" + rides [i].destPointLat + "Lon f:" + rides [i].destPointLong + "\n Comments:" +  rides [i].observations;
-				items.Add(ridestr);
+			List<Reviews> review = JsonConvert.DeserializeObject<List<Portable.RideUser>>(content);
+			Console.WriteLine (review.Count);
+			for (int i = 0; i < review.Count; i++) {
+				reviewsToShow.Add (" Calification: " + review [i].calificacion + "\n Comment: " + review [i].comentario);
 			}
-			ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items.ToArray());
-*/
+			ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, reviewsToShow.ToArray());*/
 		}
 	}}

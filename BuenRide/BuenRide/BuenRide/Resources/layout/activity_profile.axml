@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +9,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".UserProfileActivity" >
-
+    tools:context=".UserProfileActivity">
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewNombreApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="15dp"
@@ -22,20 +22,17 @@
         android:text="Nombre Apellido"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/br_gray" />
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
-        android:paddingTop="15dp" >
-
+        android:paddingTop="15dp">
         <View
             android:id="@+id/RectangleLogin"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_gravity="left"
             android:background="@layout/rectangle" />
-
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="100dp"
@@ -43,21 +40,18 @@
             android:layout_marginLeft="10dp"
             android:paddingTop="20dp"
             android:src="@drawable/ic_contact_picture" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="110dp"
-            android:paddingTop="20dp" >
-
+            android:paddingTop="20dp">
             <TextView
                 android:id="@+id/textView_mail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email:"
                 android:textColor="@color/br_gray" />
-
             <TextView
                 android:id="@+id/textView_exampleMail"
                 android:layout_width="wrap_content"
@@ -65,14 +59,12 @@
                 android:paddingLeft="15dp"
                 android:text="correo@ejemplo.com"
                 android:textColor="@color/br_gray" />
-
             <TextView
                 android:id="@+id/textView_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phone number:"
                 android:textColor="@color/br_gray" />
-
             <TextView
                 android:id="@+id/textView_examplePhone"
                 android:layout_width="wrap_content"
@@ -82,18 +74,10 @@
                 android:textColor="@color/br_gray" />
         </LinearLayout>
     </FrameLayout>
-
-    <RatingBar
-        android:id="@+id/ratingBar1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal" >
-
+        android:orientation="horizontal">
         <TextView
             android:id="@+id/textView_Review"
             android:layout_width="wrap_content"
@@ -108,21 +92,17 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
-
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="right"
-            android:layout_weight="1"
-            android:onClick="addReview" >
-
+            android:layout_weight="1">
             <View
                 android:id="@+id/RectangleAddReview"
                 android:layout_width="90dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:background="@layout/rectangle" />
-
             <TextView
                 android:id="@+id/textView_addReview"
                 android:layout_width="wrap_content"
@@ -133,39 +113,31 @@
                 android:textColor="@color/br_gray"
                 android:textStyle="bold" />
         </FrameLayout>
-
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="right"
-            android:layout_weight="1"
-            android:onClick="viewRides" >
-
+            android:layout_weight="1">
             <View
                 android:id="@+id/RectangleViewRides"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:background="@layout/rectangle" />
-
             <TextView
                 android:id="@+id/textView_viewRides"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Rides"
+                android:text="Waze"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/br_gray"
                 android:textStyle="bold" />
         </FrameLayout>
     </LinearLayout>
-
-    <ListView
-        android:id="@+id/listComments"
+    <FrameLayout
+        android:id="@+id/fragment_container_reviews"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="5dp"
-        tools:listitem="@layout/item_comment" >
-    </ListView>
-
+        android:layout_height="match_parent" />
 </LinearLayout>

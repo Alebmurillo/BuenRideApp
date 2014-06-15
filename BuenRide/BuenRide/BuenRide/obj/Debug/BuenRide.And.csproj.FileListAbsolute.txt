@@ -54,3 +54,5 @@ C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\obj\Debug\res\layout\layo
 C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\obj\Debug\R.cs.flag
 C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\obj\Debug\uploadflags.txt
 C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\obj\Debug\BuenRide.And.csprojResolveAssemblyReference.cache
+C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\obj\Debug\res\layout\dialogaddreview.xml
+C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\obj\Debug\res\layout\layout_search_other.xml
