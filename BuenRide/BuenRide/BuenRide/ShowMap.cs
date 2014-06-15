@@ -13,7 +13,7 @@ using Android.Gms.Maps.Model;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "ShowMap")]			
+	[Activity (Label = "ShowMap", Icon="@drawable/car")]			
 	public class ShowMap : Activity,GoogleMap.IOnMarkerDragListener
 	{
 		double selectedLat = 0;

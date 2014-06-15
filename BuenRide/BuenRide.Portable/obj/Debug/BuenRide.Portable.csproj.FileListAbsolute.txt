@@ -1,11 +1,5 @@
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\BuenRide.Portable.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\BuenRide.Portable.pdb
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\mscorlib.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\normidna.nlp
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\normnfc.nlp
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\normnfd.nlp
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\normnfkc.nlp
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\normnfkd.nlp
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\obj\Debug\BuenRide.Portable.csprojResolveAssemblyReference.cache
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\obj\Debug\BuenRide.Portable.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\obj\Debug\BuenRide.Portable.pdb
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Debug\BuenRide.Portable.dll
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Debug\BuenRide.Portable.pdb
+C:\Users\bolanosm\Desktop\BuenRide.Portable\obj\Debug\BuenRide.Portable.csprojResolveAssemblyReference.cache
+C:\Users\bolanosm\Desktop\BuenRide.Portable\obj\Debug\BuenRide.Portable.dll
+C:\Users\bolanosm\Desktop\BuenRide.Portable\obj\Debug\BuenRide.Portable.pdb

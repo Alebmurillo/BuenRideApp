@@ -1,8 +1,8 @@
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide\BuenRide\bin\Debug\BuenRide.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide.Portable\bin\Debug\BuenRide.Portable.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide\Components\restsharp-104.1.0\lib\android\RestSharp.MonoDroid.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll
-C:\Users\Luis\Documents\GitHub\BuenRideApp\BuenRide\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\BuenRide\bin\Debug\BuenRide.dll
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Debug\BuenRide.Portable.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\restsharp-104.1.0\lib\android\RestSharp.MonoDroid.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll

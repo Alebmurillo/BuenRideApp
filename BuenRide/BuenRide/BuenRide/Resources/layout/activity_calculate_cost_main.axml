@@ -171,7 +171,7 @@
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="4"
-                android:text="Profite"
+                android:text="Profit"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
@@ -200,7 +200,7 @@
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="4"
-                android:text="Gas per Liter"
+                android:text="Gas price per Liter"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
@@ -238,7 +238,7 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="4dp"
                 android:background="@color/br_gray" />
             <LinearLayout
                 android:layout_width="match_parent"

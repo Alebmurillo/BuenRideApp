@@ -13,7 +13,7 @@ using Android.Gms.Maps;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "CalculateCost")]			
+	[Activity (Label = "CalculateCost", Icon="@drawable/car")]			
 	public class CalculateCost : Activity
 	{
 		double startLat = 0;
@@ -34,8 +34,8 @@ namespace BuenRide.And
 			base.OnCreate (bundle);
 			startPos = true;
 			SetContentView (Resource.Layout.activity_calculate_cost_main);
-			var btnStartCurrentMap = FindViewById<View> (Resource.Id.RectangleCurrentLocation);
-			var btnStartCurrentLocation = FindViewById<View> (Resource.Id.RectangleByMap);
+			var btnStartCurrentLocation = FindViewById<View> (Resource.Id.RectangleCurrentLocation);
+			var btnStartCurrentMap = FindViewById<View> (Resource.Id.RectangleByMap);
 			var btnEndCurrentMap = FindViewById<View> (Resource.Id.RectangleCurrentLocationGPS);
 			var btnEndCurrentLocation = FindViewById<View> (Resource.Id.RectangleByMapEnd);
 			var btnCalculate = FindViewById<View> (Resource.Id.RectangleCalculate);

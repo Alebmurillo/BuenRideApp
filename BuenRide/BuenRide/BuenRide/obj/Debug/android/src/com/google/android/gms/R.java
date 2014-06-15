@@ -193,42 +193,44 @@ containing a value of this type.
     public static final class drawable {
         public static int background1=0x7f020000;
         public static int background2=0x7f020001;
-        public static int common_signin_btn_icon_dark=0x7f020002;
-        public static int common_signin_btn_icon_disabled_dark=0x7f020003;
-        public static int common_signin_btn_icon_disabled_focus_dark=0x7f020004;
-        public static int common_signin_btn_icon_disabled_focus_light=0x7f020005;
-        public static int common_signin_btn_icon_disabled_light=0x7f020006;
-        public static int common_signin_btn_icon_focus_dark=0x7f020007;
-        public static int common_signin_btn_icon_focus_light=0x7f020008;
-        public static int common_signin_btn_icon_light=0x7f020009;
-        public static int common_signin_btn_icon_normal_dark=0x7f02000a;
-        public static int common_signin_btn_icon_normal_light=0x7f02000b;
-        public static int common_signin_btn_icon_pressed_dark=0x7f02000c;
-        public static int common_signin_btn_icon_pressed_light=0x7f02000d;
-        public static int common_signin_btn_text_dark=0x7f02000e;
-        public static int common_signin_btn_text_disabled_dark=0x7f02000f;
-        public static int common_signin_btn_text_disabled_focus_dark=0x7f020010;
-        public static int common_signin_btn_text_disabled_focus_light=0x7f020011;
-        public static int common_signin_btn_text_disabled_light=0x7f020012;
-        public static int common_signin_btn_text_focus_dark=0x7f020013;
-        public static int common_signin_btn_text_focus_light=0x7f020014;
-        public static int common_signin_btn_text_light=0x7f020015;
-        public static int common_signin_btn_text_normal_dark=0x7f020016;
-        public static int common_signin_btn_text_normal_light=0x7f020017;
-        public static int common_signin_btn_text_pressed_dark=0x7f020018;
-        public static int common_signin_btn_text_pressed_light=0x7f020019;
-        public static int fb_login=0x7f02001a;
-        public static int ic_contact_picture=0x7f02001b;
-        public static int ic_launcher=0x7f02001c;
-        public static int ic_plusone_medium_off_client=0x7f02001d;
-        public static int ic_plusone_small_off_client=0x7f02001e;
-        public static int ic_plusone_standard_off_client=0x7f02001f;
-        public static int ic_plusone_tall_off_client=0x7f020020;
-        public static int icon=0x7f020021;
-        public static int logo=0x7f020022;
+        public static int car=0x7f020002;
+        public static int common_signin_btn_icon_dark=0x7f020003;
+        public static int common_signin_btn_icon_disabled_dark=0x7f020004;
+        public static int common_signin_btn_icon_disabled_focus_dark=0x7f020005;
+        public static int common_signin_btn_icon_disabled_focus_light=0x7f020006;
+        public static int common_signin_btn_icon_disabled_light=0x7f020007;
+        public static int common_signin_btn_icon_focus_dark=0x7f020008;
+        public static int common_signin_btn_icon_focus_light=0x7f020009;
+        public static int common_signin_btn_icon_light=0x7f02000a;
+        public static int common_signin_btn_icon_normal_dark=0x7f02000b;
+        public static int common_signin_btn_icon_normal_light=0x7f02000c;
+        public static int common_signin_btn_icon_pressed_dark=0x7f02000d;
+        public static int common_signin_btn_icon_pressed_light=0x7f02000e;
+        public static int common_signin_btn_text_dark=0x7f02000f;
+        public static int common_signin_btn_text_disabled_dark=0x7f020010;
+        public static int common_signin_btn_text_disabled_focus_dark=0x7f020011;
+        public static int common_signin_btn_text_disabled_focus_light=0x7f020012;
+        public static int common_signin_btn_text_disabled_light=0x7f020013;
+        public static int common_signin_btn_text_focus_dark=0x7f020014;
+        public static int common_signin_btn_text_focus_light=0x7f020015;
+        public static int common_signin_btn_text_light=0x7f020016;
+        public static int common_signin_btn_text_normal_dark=0x7f020017;
+        public static int common_signin_btn_text_normal_light=0x7f020018;
+        public static int common_signin_btn_text_pressed_dark=0x7f020019;
+        public static int common_signin_btn_text_pressed_light=0x7f02001a;
+        public static int fb_login=0x7f02001b;
+        public static int ic_contact_picture=0x7f02001c;
+        public static int ic_launcher=0x7f02001d;
+        public static int ic_plusone_medium_off_client=0x7f02001e;
+        public static int ic_plusone_small_off_client=0x7f02001f;
+        public static int ic_plusone_standard_off_client=0x7f020020;
+        public static int ic_plusone_tall_off_client=0x7f020021;
+        public static int icon=0x7f020022;
+        public static int logo=0x7f020023;
+        public static int monoandroidsplash=0x7f020024;
     }
     public static final class id {
-        public static int Facebook=0x7f050064;
+        public static int Facebook=0x7f05006b;
         public static int RectangleAddReview=0x7f050046;
         public static int RectangleAddRide=0x7f05000f;
         public static int RectangleByMap=0x7f050014;
@@ -259,26 +261,28 @@ containing a value of this type.
         public static int RectangleSignIn=0x7f050030;
         public static int RectangleSignUp=0x7f050032;
         public static int RectangleViewRides=0x7f050048;
-        public static int Twitter=0x7f050065;
+        public static int Twitter=0x7f05006c;
         public static int buttonOK=0x7f050024;
-        public static int buttonOKMap=0x7f050067;
+        public static int buttonOKMap=0x7f050069;
         public static int comentario=0x7f05005c;
         public static int containerLogin=0x7f050027;
         public static int email=0x7f050051;
         public static int emailLI=0x7f05002b;
         public static int end_point=0x7f05005f;
         public static int end_point_value=0x7f050060;
+        public static int fragmentContainer=0x7f050063;
         public static int hybrid=0x7f050004;
         public static int imageView1=0x7f050028;
         public static int imageViewFbLogin=0x7f050034;
         public static int image_user=0x7f05005a;
         public static int imagelogo=0x7f050035;
+        public static int linearLayout1=0x7f050064;
         public static int listComments=0x7f05004a;
         public static int listRides=0x7f050026;
         public static int lista=0x7f05004b;
         public static int login=0x7f05002f;
-        public static int login_shape=0x7f050063;
-        public static int my_mapfragment_container=0x7f050066;
+        public static int login_shape=0x7f05006a;
+        public static int my_mapfragment_container=0x7f05006d;
         public static int name=0x7f050050;
         public static int none=0x7f050000;
         public static int normal=0x7f050001;
@@ -289,6 +293,10 @@ containing a value of this type.
         public static int observations=0x7f05000e;
         public static int password=0x7f050055;
         public static int passwordLI=0x7f05002e;
+        public static int radioButton1=0x7f050066;
+        public static int radioButton2=0x7f050067;
+        public static int radioButton3=0x7f050068;
+        public static int radioGroup1=0x7f050065;
         public static int ratingBar1=0x7f050044;
         public static int satellite=0x7f050002;
         public static int seekBarProfite=0x7f050019;
@@ -297,7 +305,7 @@ containing a value of this type.
         public static int start_point_value=0x7f05005e;
         public static int telephone=0x7f050057;
         public static int terrain=0x7f050003;
-        public static int textItem=0x7f050068;
+        public static int textItem=0x7f05006e;
         public static int textView1=0x7f050023;
         public static int textView_Review=0x7f050045;
         public static int textView_addReview=0x7f050047;
@@ -352,13 +360,15 @@ containing a value of this type.
         public static int background_image_gradient=0x7f03000b;
         public static int item_comment=0x7f03000c;
         public static int item_ride=0x7f03000d;
-        public static int rectangle=0x7f03000e;
-        public static int rectangle_input=0x7f03000f;
-        public static int rectangle_input_gray=0x7f030010;
-        public static int rectangle_stop=0x7f030011;
-        public static int sharelayout=0x7f030012;
-        public static int showmap=0x7f030013;
-        public static int textviewitem=0x7f030014;
+        public static int layout_searchride=0x7f03000e;
+        public static int layoutsearchbymap=0x7f03000f;
+        public static int rectangle=0x7f030010;
+        public static int rectangle_input=0x7f030011;
+        public static int rectangle_input_gray=0x7f030012;
+        public static int rectangle_stop=0x7f030013;
+        public static int sharelayout=0x7f030014;
+        public static int showmap=0x7f030015;
+        public static int textviewitem=0x7f030016;
     }
     public static final class string {
         public static int action_forgot_password=0x7f060023;
@@ -482,6 +492,9 @@ containing a value of this type.
         public static int title_activity_menu=0x7f06002d;
         public static int title_activity_search_ride=0x7f06002e;
         public static int title_activity_sign_up=0x7f06002c;
+    }
+    public static final class style {
+        public static int Mono_Android_Theme_Splash=0x7f090000;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.

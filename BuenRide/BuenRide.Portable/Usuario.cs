@@ -16,7 +16,7 @@ namespace BuenRide.Portable
 			get;
 			set;
 		}
-		public string apikey {
+		public string token {
 			get;
 			set;
 		}
@@ -29,12 +29,12 @@ namespace BuenRide.Portable
 			set;
 		}
 
-		public Usuario (int Id, string Username, string Password, string Apikey, DateTime CreatedAt, DateTime UpdatedAt)
+		public Usuario (int Id, string Username, string Password, string token, DateTime CreatedAt, DateTime UpdatedAt)
 		{
 			id = Id;
 			username = Username;
 			password = Password;
-			apikey = Apikey;
+			token = token;
 			createdAt = CreatedAt;
 			updatedAt = UpdatedAt;
 		}

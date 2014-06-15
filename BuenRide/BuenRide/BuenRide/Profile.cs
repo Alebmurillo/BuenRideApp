@@ -11,7 +11,7 @@ using Android.Widget;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "Profile")]			
+	[Activity (Label = "Profile", Icon="@drawable/car")]			
 	public class Profile : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

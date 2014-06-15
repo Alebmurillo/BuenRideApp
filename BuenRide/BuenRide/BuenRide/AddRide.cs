@@ -9,10 +9,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using RestSharp;
+using BuenRide.Portable;
+using System.Threading;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "AddRide")]			
+	[Activity (Label = "AddRide",Icon="@drawable/car")]			
 	public class AddRide : Activity
 	{
 		string apikey = "";
@@ -22,16 +24,19 @@ namespace BuenRide.And
 		double endLat = 0;
 		double endLong = 0;
 		EditText observations;
+		private BackendConnection backend;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.activity_add_ride);
 			var btnStartMap = FindViewById<View> (Resource.Id.RectangleByMapStart);
 			var btnStartGPS = FindViewById<View> (Resource.Id.RectangleCurrentLocationGPStart);
-			apikey = Intent.GetStringExtra ("apikey") ?? "";
+			apikey = Intent.GetStringExtra ("token") ?? "";
+			backend = BackendConnection.Instance;
 
-			var btnEndMap = FindViewById<View> (Resource.Id.RectangleEndMapRide);
-			var btnEndGPS = FindViewById<View> (Resource.Id.RectangleEndGPSRide);
+			var btnEndGPS = FindViewById<View> (Resource.Id.RectangleEndMapRide);
+			var btnEndMap = FindViewById<View> (Resource.Id.RectangleEndGPSRide);
 
 			var btnCancel = FindViewById<View> (Resource.Id.RectangleCancelAddRide);
 			var btnAddRide = FindViewById<View> (Resource.Id.RectangleAddRide);
@@ -81,9 +86,11 @@ namespace BuenRide.And
 		}
 		void HandleAddRide(object sender, EventArgs e)
 		{
-			var client = new RestClient ("http://www.buenrideapp.com");
+			EventWaitHandle Wait = new AutoResetEvent(false);
+			var client = new RestClient (backend.url);
 			var request = new RestRequest ("api/rides/", RestSharp.Method.POST);
-			request.AddParameter("apikey", apikey);
+			request.AddHeader ("apikey", backend.apikey);
+			request.AddHeader("token", backend.token);
 			request.AddParameter("observations", observations.Text);
 			request.AddParameter("startPointLat", ""+startLat);
 			request.AddParameter("startPointLong", ""+startLong);
@@ -91,8 +98,10 @@ namespace BuenRide.And
 			request.AddParameter("destPointLong", ""+ endLong);
 			client.ExecuteAsync (request, response => {
 				Console.WriteLine (response.Content);
-				Alert ("Alert", "Ride Added", false, (res) => {} );
+				Wait.Set();
 			});
+			Wait.WaitOne();
+			Finish ();
 		}
 		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
 		{
@@ -108,24 +117,6 @@ namespace BuenRide.And
 
 				}
 			}
-		}
-		public void Alert (string title, string message, bool CancelButton , Action<Result> callback)
-		{
-			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.SetTitle(title);
-			builder.SetMessage(message);
-
-			builder.SetPositiveButton("Ok", (sender, e) => {
-				callback(Result.Ok);
-			});
-
-			if (CancelButton) {
-				builder.SetNegativeButton("Cancel", (sender, e) => {
-					callback(Result.Canceled);
-				});
-			}
-
-			builder.Show();
 		}
 	}
 }

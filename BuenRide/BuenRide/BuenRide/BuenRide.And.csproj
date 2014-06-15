@@ -27,6 +27,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -43,14 +44,8 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="GooglePlayServicesLib">
-      <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Auth.Android">
       <HintPath>..\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Social.Android">
-      <HintPath>..\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll</HintPath>
     </Reference>
     <Reference Include="Facebook">
       <HintPath>..\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll</HintPath>
@@ -61,9 +56,13 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="BuenRide.Portable">
-      <HintPath>..\..\BuenRide.Portable\bin\Debug\BuenRide.Portable.dll</HintPath>
+    <Reference Include="GooglePlayServicesLib">
+      <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Social.Android">
+      <HintPath>..\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android.Support.v4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -79,6 +78,8 @@
     <Compile Include="SignUp.cs" />
     <Compile Include="AddRide.cs" />
     <Compile Include="WaitForGPS.cs" />
+    <Compile Include="SearchRideByMap.cs" />
+    <Compile Include="SearchRideMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -116,17 +117,12 @@
     <AndroidResource Include="Resources\layout\activity_share.axml" />
     <AndroidResource Include="Resources\layout\activity_gps.axml" />
     <AndroidResource Include="Resources\layout\TextViewItem.axml" />
+    <AndroidResource Include="Resources\layout\layout_SearchRide.axml" />
+    <AndroidResource Include="Resources\drawable\car.png" />
+    <AndroidResource Include="Resources\layout\LayoutSearchbyMap.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <XamarinComponentReference Include="googleplayservicesjellybean">
-      <Version>16.0</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="xamarin.social">
-      <Version>1.1.1</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
     <XamarinComponentReference Include="facebook-sdk">
       <Version>6.2.1</Version>
       <Visible>False</Visible>
@@ -139,5 +135,19 @@
       <Version>4.5.11</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+    <XamarinComponentReference Include="googleplayservicesjellybean">
+      <Version>16.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.social">
+      <Version>1.1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Desktop\BuenRide.Portable\BuenRide.Portable.csproj">
+      <Project>{743B0240-60AD-42FA-B0D1-C3454F73D644}</Project>
+      <Name>BuenRide.Portable</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

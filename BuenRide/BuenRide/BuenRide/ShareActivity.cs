@@ -13,7 +13,7 @@ using Xamarin.Social;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "ShareActivity")]			
+	[Activity (Label = "ShareActivity", Icon="@drawable/car")]			
 	public class ShareActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

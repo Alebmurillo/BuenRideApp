@@ -9,10 +9,13 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using RestSharp;
+using System.Threading;
+using BuenRide.Portable;
+using Newtonsoft.Json;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "SignUp")]			
+	[Activity (Label = "SignUp", Icon="@drawable/car")]			
 	public class SignUp : Activity
 	{
 		EditText name;
@@ -20,11 +23,13 @@ namespace BuenRide.And
 		EditText username;
 		EditText password;
 		EditText telephone;
+		BackendConnection backend;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+
 			SetContentView (Resource.Layout.activity_sign_up);
-			// Create your application here
+			backend = BackendConnection.Instance;
 			var btnCancel = FindViewById<View> (Resource.Id.RectangleCancelSignUp);
 			var btnSignUp = FindViewById<View> (Resource.Id.RectangleSignUp);
 			name = FindViewById<EditText> (Resource.Id.name);
@@ -37,8 +42,10 @@ namespace BuenRide.And
 
 		}
 		void insert(){
-			var client = new RestClient ("http://www.buenrideapp.com");
-			var request = new RestRequest ("api/usuarios/", RestSharp.Method.POST);
+			EventWaitHandle Wait = new AutoResetEvent(false);
+			var client = new RestClient (backend.url);
+			var request = new RestRequest ("api/usuarios/registrar", RestSharp.Method.POST);
+			request.AddHeader ("apikey", backend.apikey);
 			request.AddParameter("username", username.Text);
 			request.AddParameter("password", password.Text);
 			request.AddParameter("name", name.Text);
@@ -46,14 +53,37 @@ namespace BuenRide.And
 			request.AddParameter("phone", telephone.Text);
 			client.ExecuteAsync (request, response => {
 				Console.WriteLine (response.Content);
+				Wait.Set();
 			});
+			Wait.WaitOne();
+			request = new RestRequest ("api/usuarios/login", RestSharp.Method.POST);
+			request.AddHeader ("apikey", backend.apikey);
+			request.AddParameter("password",password.Text);
+			request.AddParameter("email", email.Text);
+			string content = @"{}";
+			client.ExecuteAsync (request, response => {
+				content = response.Content; // raw content as string
+				Wait.Set();
+			});
+			Wait.WaitOne();
+			Usuario user = JsonConvert.DeserializeObject<Portable.Usuario>(content);
+			try {if (user.token == null){ 
+				Alert ("Failed to Log In", "Error creating user", false, (res) => {} );
+			}
+			else{
+				Console.WriteLine (user.token);
+				var activity2 = new Intent (this, typeof(PrincipalMenu));
+				backend.token = user.token;
+				StartActivity (activity2);
+				}	
+		}catch{
+				Alert ("Failed to Log In", "No connection found", false, (res) => {} );
+			}
 		}
 		void HandleLogin(object sender, EventArgs e)
 		{
 			if (username.Text != "" && password.Text != "" && name.Text != "" && email.Text != "" && telephone.Text != "") {
 				insert ();
-				var activity2 = new Intent (this, typeof(PrincipalMenu));
-				StartActivity (activity2);
 			} else {
 				Alert ("Alert", "Please fill all the spaces", false, (res) => {} );
 			}

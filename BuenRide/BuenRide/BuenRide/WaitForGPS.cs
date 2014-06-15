@@ -12,7 +12,7 @@ using Android.Locations;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "WaitForGPS")]			
+	[Activity (Label = "WaitForGPS", Icon="@drawable/car")]			
 	public class WaitForGPS : Activity,ILocationListener
 	{
 		Location _currentLocation;
@@ -80,7 +80,9 @@ namespace BuenRide.And
 		protected override void OnResume()
 		{
 			base.OnResume();
-			_locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);
+			try{_locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);}
+			catch {
+			}
 		}
 		protected override void OnPause()
 		{

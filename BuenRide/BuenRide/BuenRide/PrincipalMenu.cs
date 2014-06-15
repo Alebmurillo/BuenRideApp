@@ -9,10 +9,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using RestSharp;
+using BuenRide.Portable;
+using System.Threading;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "PrincipalMenu")]			
+	[Activity (Label = "PrincipalMenu", Icon="@drawable/car")]			
 	public class PrincipalMenu : Activity
 	{
 		string apikey = "";
@@ -20,7 +22,7 @@ namespace BuenRide.And
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.activity_menu);
-			apikey = Intent.GetStringExtra ("apikey") ?? "";
+			apikey = Intent.GetStringExtra ("token") ?? "";
 
 			var btnSearchRide = FindViewById<View> (Resource.Id.RectangleSearchRide);
 			var btnAddRide = FindViewById<View> (Resource.Id.RectangleAddRide);
@@ -39,21 +41,22 @@ namespace BuenRide.And
 		}
 		void HandleSearchRide(object sender, EventArgs e)
 		{
-
-			var client = new RestClient ("http://www.buenrideapp.com");
+			var activity2 = new Intent (this, typeof(SearchRideMenu));
+			StartActivity (activity2);
+			/*	var client = new RestClient ("http://www.buenrideapp.com");
 			var request = new RestRequest ("api/rides", RestSharp.Method.GET);
 			List<Portable.Ride> rides = new List<Portable.Ride>();
 			client.ExecuteAsync (request, response => {
 				var content = response.Content; // raw content as string
-				var activitySearch = new Intent (this, typeof(SearchRide));
+				var activitySearch = new Intent (this, typeof(SearchRideByMap));
 				activitySearch.PutExtra ("contentJson", content);
 				StartActivity (activitySearch);
-			});
+			});*/
 		}
 		void HandleAddRide(object sender, EventArgs e)
 		{
 			var activityAddRide = new Intent (this, typeof(AddRide));
-			activityAddRide.PutExtra ("apikey", apikey);
+			activityAddRide.PutExtra ("token", apikey);
 			StartActivity (activityAddRide); 
 		}
 		void HandleGoToProfile(object sender, EventArgs e)
@@ -74,7 +77,18 @@ namespace BuenRide.And
 		}
 		void HandleLogOut(object sender, EventArgs e)
 		{
-			//log out from facebook
+			BackendConnection backend = BackendConnection.Instance;
+			EventWaitHandle Wait = new AutoResetEvent(false);
+			var client = new RestClient (backend.url);
+			var request = new RestRequest ("api/usuarios/logout", RestSharp.Method.GET);
+			request.AddHeader ("apikey", backend.apikey);
+			request.AddHeader ("token", backend.token);
+			client.ExecuteAsync (request, response => {
+				Console.WriteLine (response.Content);
+				Wait.Set();
+			});
+			Wait.WaitOne();
+			Finish ();
 		}
 	}
 }

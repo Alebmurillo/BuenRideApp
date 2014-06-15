@@ -90,9 +90,7 @@ namespace FacebookSample.Android
 							Alert ("Your Info", data, false, (res) => {} );
 						});
 					}
-				});
-			} else {
-				Alert ("Not Logged In", "Please Log In First", false, (res) => { });
+				});		Alert ("Not Logged In", "Please Log In First", false, (res) => { });
 			}
 		}
 

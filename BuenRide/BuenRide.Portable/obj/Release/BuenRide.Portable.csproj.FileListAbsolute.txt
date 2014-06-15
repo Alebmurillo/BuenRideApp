@@ -1,0 +1,11 @@
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\BuenRide.Portable.dll
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\BuenRide.Portable.pdb
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\mscorlib.dll
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\normidna.nlp
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\normnfc.nlp
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\normnfd.nlp
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\normnfkc.nlp
+C:\Users\bolanosm\Desktop\BuenRide.Portable\bin\Release\normnfkd.nlp
+C:\Users\bolanosm\Desktop\BuenRide.Portable\obj\Release\BuenRide.Portable.csprojResolveAssemblyReference.cache
+C:\Users\bolanosm\Desktop\BuenRide.Portable\obj\Release\BuenRide.Portable.dll
+C:\Users\bolanosm\Desktop\BuenRide.Portable\obj\Release\BuenRide.Portable.pdb

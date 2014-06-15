@@ -17,7 +17,7 @@ using Facebook;
 
 namespace BuenRide.And
 {
-	[Activity (Label = "FBWebViewAuthActivity")]			
+	[Activity (Label = "FBWebViewAuthActivity", Icon="@drawable/car")]			
 	public class FBWebViewAuthActivity : Activity
 	{
 		FacebookClient fb;
