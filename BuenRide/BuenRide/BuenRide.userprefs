@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BuenRide\MainActivity.cs">
+    <Files>
+      <File FileName="BuenRide\SignUp.cs" Line="1" Column="1" />
+      <File FileName="BuenRide\MainActivity.cs" Line="12" Column="26" />
+      <File FileName="BuenRide\SearchRide.cs" Line="16" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BuenRide.And AndroidDeviceId-Debug="4df75839326630c9" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
+</Properties>

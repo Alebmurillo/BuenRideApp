@@ -1,0 +1,2 @@
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\googleplayservicesjellybean-16.0\samples\MapsAndLocationDemo\SimpleMapDemo\bin\Debug\SimpleMapDemo.dll
+C:\Users\bolanosm\Documents\Projects\BuenRide\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll
